@@ -1,4 +1,4 @@
 name: 'dbt_test'
 version: '0.1'
 source-paths: ["models"]
-profile: tui_opa
+profile: tui_opa_dev_dbt_test

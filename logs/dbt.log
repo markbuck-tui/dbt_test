@@ -1,0 +1,1729 @@
+2019-09-20 13:30:20,626 (MainThread): Tracking: tracking
+2019-09-20 13:30:20,682 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C84148>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000004983208>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C72188>]}
+2019-09-20 13:30:21,289 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:30:21,290 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61317), raddr=('54.174.31.151', 443)>
+
+2019-09-20 13:30:21,293 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:30:21,344 (MainThread): Parsing macros\core.sql
+2019-09-20 13:30:21,364 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:30:21,445 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:30:21,473 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:30:21,479 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:30:21,490 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:30:21,518 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:30:21,538 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:30:21,580 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:30:21,602 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:30:21,623 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:30:21,656 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:30:21,714 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:30:21,781 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:30:21,789 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:30:21,830 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:30:21,844 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:30:21,858 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:30:21,874 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:30:21,880 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:30:21,885 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:30:21,909 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:30:21,954 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:30:21,989 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:30:22,017 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:30:22,073 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:30:22,080 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:30:22,091 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:30:22,145 (MainThread): Parsing model.dbt_test.create_test_table
+2019-09-20 13:30:22,148 (MainThread): Acquiring new snowflake connection "create_test_table".
+2019-09-20 13:30:22,149 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:30:22,159 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:30:22,716 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:30:22,755 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:30:23,437 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:30:23,439 (MainThread): 
+2019-09-20 13:30:23,439 (MainThread): 13:30:23 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:30:23,440 (MainThread): 13:30:23 | 
+2019-09-20 13:30:23,476 (Thread-1): Acquiring new snowflake connection "create_test_table".
+2019-09-20 13:30:23,476 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:30:24,225 (Thread-1): Compiling model.dbt_test.create_test_table
+2019-09-20 13:30:24,247 (Thread-1): Writing injected SQL for node "model.dbt_test.create_test_table"
+2019-09-20 13:30:24,370 (MainThread): Connection 'create_test_table' was left open.
+2019-09-20 13:30:24,371 (MainThread): On create_test_table: Close
+2019-09-20 13:30:24,501 (MainThread): Connection 'create_test_table' was left open.
+2019-09-20 13:30:24,501 (MainThread): On create_test_table: Close
+2019-09-20 13:30:24,662 (MainThread): 13:30:24 | Done.
+2019-09-20 13:30:24,665 (MainThread): Flushing usage events
+2019-09-20 13:32:02,734 (MainThread): Tracking: tracking
+2019-09-20 13:32:02,737 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000004982F88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000004982E48>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C66808>]}
+2019-09-20 13:32:03,067 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:32:03,067 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61341), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:32:03,069 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:32:03,110 (MainThread): Parsing macros\core.sql
+2019-09-20 13:32:03,124 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:32:03,201 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:32:03,221 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:32:03,225 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:32:03,231 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:32:03,237 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:32:03,244 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:32:03,249 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:32:03,268 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:32:03,286 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:32:03,304 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:32:03,342 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:32:03,386 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:32:03,392 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:32:03,419 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:32:03,433 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:32:03,446 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:32:03,457 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:32:03,465 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:32:03,470 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:32:03,475 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:32:03,481 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:32:03,504 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:32:03,509 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:32:03,522 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:32:03,528 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:32:03,537 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:32:03,576 (MainThread): Parsing model.dbt_test.create_test_table
+2019-09-20 13:32:03,579 (MainThread): Acquiring new snowflake connection "create_test_table".
+2019-09-20 13:32:03,579 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:32:03,582 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:32:03,984 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:32:04,018 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:32:04,738 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:32:04,741 (MainThread): 
+2019-09-20 13:32:04,742 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 13:32:04,743 (MainThread): Re-using an available connection from the pool (formerly create_test_table).
+2019-09-20 13:32:04,795 (MainThread): Parsing macros\core.sql
+2019-09-20 13:32:04,807 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:32:04,903 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:32:04,928 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:32:04,932 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:32:04,941 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:32:04,950 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:32:04,959 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:32:04,965 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:32:04,999 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:32:05,023 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:32:05,042 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:32:05,083 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:32:05,134 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:32:05,142 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:32:05,176 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:32:05,190 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:32:05,206 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:32:05,223 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:32:05,229 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:32:05,234 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:32:05,240 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:32:05,247 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:32:05,278 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:32:05,284 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:32:05,308 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:32:05,315 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:32:05,326 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:32:05,588 (MainThread): Using snowflake connection "master".
+2019-09-20 13:32:05,588 (MainThread): On master: select distinct schema_name
+    from OPA_DEV.information_schema.schemata
+    where catalog_name ilike 'OPA_DEV'
+2019-09-20 13:32:06,451 (MainThread): SQL status: SUCCESS 28 in 0.86 seconds
+2019-09-20 13:32:06,515 (MainThread): Using snowflake connection "master".
+2019-09-20 13:32:06,515 (MainThread): On master: BEGIN
+2019-09-20 13:32:06,637 (MainThread): SQL status: SUCCESS 1 in 0.12 seconds
+2019-09-20 13:32:06,637 (MainThread): Using snowflake connection "master".
+2019-09-20 13:32:06,637 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_DEV.information_schema.tables
+    where table_schema ilike 'opa_mrt_all'
+      and table_catalog ilike 'opa_dev'
+2019-09-20 13:32:08,725 (MainThread): SQL status: SUCCESS 19 in 2.09 seconds
+2019-09-20 13:32:08,738 (MainThread): On master: ROLLBACK
+2019-09-20 13:32:08,890 (MainThread): Using snowflake connection "master".
+2019-09-20 13:32:08,890 (MainThread): On master: BEGIN
+2019-09-20 13:32:09,124 (MainThread): SQL status: SUCCESS 1 in 0.23 seconds
+2019-09-20 13:32:09,124 (MainThread): On master: COMMIT
+2019-09-20 13:32:09,125 (MainThread): Using snowflake connection "master".
+2019-09-20 13:32:09,125 (MainThread): On master: COMMIT
+2019-09-20 13:32:09,448 (MainThread): SQL status: SUCCESS 1 in 0.32 seconds
+2019-09-20 13:32:09,449 (MainThread): 13:32:09 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:32:09,450 (MainThread): 13:32:09 | 
+2019-09-20 13:32:09,454 (Thread-1): 13:32:09 | 1 of 1 START view model OPA_MRT_ALL.create_test_table................ [RUN]
+2019-09-20 13:32:09,456 (Thread-1): Acquiring new snowflake connection "create_test_table".
+2019-09-20 13:32:09,456 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:32:10,245 (Thread-1): Compiling model.dbt_test.create_test_table
+2019-09-20 13:32:10,252 (Thread-1): Writing injected SQL for node "model.dbt_test.create_test_table"
+2019-09-20 13:32:10,319 (Thread-1): Writing runtime SQL for node "model.dbt_test.create_test_table"
+2019-09-20 13:32:10,353 (Thread-1): Using snowflake connection "create_test_table".
+2019-09-20 13:32:10,353 (Thread-1): On create_test_table: BEGIN
+2019-09-20 13:32:10,489 (Thread-1): SQL status: SUCCESS 1 in 0.14 seconds
+2019-09-20 13:32:10,491 (Thread-1): Using snowflake connection "create_test_table".
+2019-09-20 13:32:10,491 (Thread-1): On create_test_table: create or replace view OPA_DEV.OPA_MRT_ALL.create_test_table as (
+    CREATE OR REPLACE TABLE dbt_test (
+  FILE_DT number(38,0),
+  ACCOM_PRC_ID NUMBER(38,0),
+  PROM_CD VARCHAR(16),
+  STC_STK_CD VARCHAR(80),
+  ITIN_NUM NUMBER(38,0),
+  UNIT_CD VARCHAR(64),
+  BB_CD VARCHAR(16),
+  STAY NUMBER(38,0),
+  MOD_DT_TM DATE,
+  STS VARCHAR(16),
+  BKG_TP VARCHAR(16),
+  PROM_ID NUMBER(38,0),
+  STC_STK_ID NUMBER(38,0),
+  UNIT_ID NUMBER(38,0),
+  BB_CD_ID NUMBER(38,0),
+  STC_STK_TP_MTH VARCHAR(16),
+  CREATED_ON date
+);
+2019-09-20 13:32:10,841 (Thread-1): Snowflake error: 001003 (42000): 018f0350-00b1-ded9-0000-0e290152c176: SQL compilation error:
+syntax error line 2 at position 4 unexpected 'CREATE'.
+syntax error line 3 at position 22 unexpected ','.
+2019-09-20 13:32:10,841 (Thread-1): On create_test_table: ROLLBACK
+2019-09-20 13:32:11,034 (Thread-1): 13:32:11 | 1 of 1 ERROR creating view model OPA_MRT_ALL.create_test_table....... [ERROR in 1.58s]
+2019-09-20 13:32:11,075 (MainThread): Using snowflake connection "master".
+2019-09-20 13:32:11,075 (MainThread): On master: BEGIN
+2019-09-20 13:32:11,193 (MainThread): SQL status: SUCCESS 1 in 0.12 seconds
+2019-09-20 13:32:11,193 (MainThread): On master: COMMIT
+2019-09-20 13:32:11,194 (MainThread): Using snowflake connection "master".
+2019-09-20 13:32:11,194 (MainThread): On master: COMMIT
+2019-09-20 13:32:11,341 (MainThread): SQL status: SUCCESS 1 in 0.15 seconds
+2019-09-20 13:32:11,342 (MainThread): 13:32:11 | 
+2019-09-20 13:32:11,342 (MainThread): 13:32:11 | Finished running 1 view model in 6.60s.
+2019-09-20 13:32:11,343 (MainThread): Connection 'master' was left open.
+2019-09-20 13:32:11,344 (MainThread): On master: Close
+2019-09-20 13:32:11,571 (MainThread): Connection 'create_test_table' was left open.
+2019-09-20 13:32:11,571 (MainThread): On create_test_table: Close
+2019-09-20 13:32:11,720 (MainThread): 
+2019-09-20 13:32:11,722 (MainThread): Completed with 1 error and 0 warnings:
+2019-09-20 13:32:11,723 (MainThread): 
+2019-09-20 13:32:11,723 (MainThread): Database Error in model create_test_table (models\create_test_table.sql)
+2019-09-20 13:32:11,725 (MainThread):   001003 (42000): 018f0350-00b1-ded9-0000-0e290152c176: SQL compilation error:
+2019-09-20 13:32:11,725 (MainThread):   syntax error line 2 at position 4 unexpected 'CREATE'.
+2019-09-20 13:32:11,726 (MainThread):   syntax error line 3 at position 22 unexpected ','.
+2019-09-20 13:32:11,727 (MainThread):   compiled SQL at target\compiled\dbt_test\create_test_table.sql
+2019-09-20 13:32:11,728 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2019-09-20 13:32:11,728 (MainThread): Flushing usage events
+2019-09-20 13:35:43,281 (MainThread): Tracking: tracking
+2019-09-20 13:35:43,285 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAFF48>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAF548>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C71948>]}
+2019-09-20 13:35:43,644 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:35:43,645 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61426), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:35:43,647 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:35:43,688 (MainThread): Parsing macros\core.sql
+2019-09-20 13:35:43,704 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:35:43,781 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:35:43,800 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:35:43,804 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:35:43,811 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:35:43,817 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:35:43,823 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:35:43,827 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:35:43,846 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:35:43,862 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:35:43,882 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:35:43,920 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:35:43,964 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:35:43,978 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:35:44,007 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:35:44,021 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:35:44,034 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:35:44,048 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:35:44,053 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:35:44,058 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:35:44,062 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:35:44,068 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:35:44,100 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:35:44,107 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:35:44,129 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:35:44,135 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:35:44,149 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:35:44,195 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 13:35:44,199 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:35:44,200 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:35:44,204 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:35:44,908 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:35:44,955 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:35:45,764 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:35:45,765 (MainThread): 
+2019-09-20 13:35:45,767 (MainThread): 13:35:45 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:35:45,768 (MainThread): 13:35:45 | 
+2019-09-20 13:35:45,792 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:35:45,794 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:35:46,622 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 13:35:46,632 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:35:46,670 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:35:46,671 (MainThread): On test_bf_subset: Close
+2019-09-20 13:35:47,076 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:35:47,077 (MainThread): On test_bf_subset: Close
+2019-09-20 13:35:47,178 (MainThread): 13:35:47 | Done.
+2019-09-20 13:35:47,179 (MainThread): Flushing usage events
+2019-09-20 13:37:24,091 (MainThread): Tracking: tracking
+2019-09-20 13:37:24,094 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAF108>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAF148>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C6BF08>]}
+2019-09-20 13:37:24,424 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:37:24,425 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61448), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:37:24,427 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:37:24,465 (MainThread): Parsing macros\core.sql
+2019-09-20 13:37:24,478 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:37:24,552 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:37:24,576 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:37:24,582 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:37:24,588 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:37:24,595 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:37:24,601 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:37:24,605 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:37:24,622 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:37:24,642 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:37:24,664 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:37:24,697 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:37:24,745 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:37:24,751 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:37:24,781 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:37:24,798 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:37:24,812 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:37:24,826 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:37:24,831 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:37:24,836 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:37:24,841 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:37:24,846 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:37:24,873 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:37:24,880 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:37:24,899 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:37:24,905 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:37:24,916 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:37:24,956 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 13:37:24,958 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:37:24,959 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:37:24,961 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:37:25,433 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:37:25,463 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:37:26,327 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:37:26,328 (MainThread): 
+2019-09-20 13:37:26,329 (MainThread): 13:37:26 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:37:26,330 (MainThread): 13:37:26 | 
+2019-09-20 13:37:26,337 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:37:26,337 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:37:27,090 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 13:37:27,099 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:37:27,199 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:37:27,200 (MainThread): On test_bf_subset: Close
+2019-09-20 13:37:27,292 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:37:27,293 (MainThread): On test_bf_subset: Close
+2019-09-20 13:37:27,394 (MainThread): 13:37:27 | Done.
+2019-09-20 13:37:27,395 (MainThread): Flushing usage events
+2019-09-20 13:37:46,578 (MainThread): Tracking: tracking
+2019-09-20 13:37:46,581 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000000573E148>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000004936388>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C703C8>]}
+2019-09-20 13:37:46,864 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:37:46,865 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61464), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:37:46,867 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:37:46,904 (MainThread): Parsing macros\core.sql
+2019-09-20 13:37:46,920 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:37:47,013 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:37:47,034 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:37:47,040 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:37:47,046 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:37:47,052 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:37:47,057 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:37:47,061 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:37:47,083 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:37:47,101 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:37:47,126 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:37:47,161 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:37:47,204 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:37:47,210 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:37:47,245 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:37:47,259 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:37:47,273 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:37:47,285 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:37:47,290 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:37:47,294 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:37:47,298 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:37:47,307 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:37:47,336 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:37:47,340 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:37:47,358 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:37:47,363 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:37:47,373 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:37:47,421 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 13:37:47,424 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:37:47,424 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:37:47,427 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:37:47,837 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:37:47,874 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:37:48,466 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:37:48,468 (MainThread): 
+2019-09-20 13:37:48,469 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 13:37:48,470 (MainThread): Re-using an available connection from the pool (formerly test_bf_subset).
+2019-09-20 13:37:48,513 (MainThread): Parsing macros\core.sql
+2019-09-20 13:37:48,529 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:37:48,622 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:37:48,651 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:37:48,659 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:37:48,668 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:37:48,679 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:37:48,689 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:37:48,704 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:37:48,739 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:37:48,756 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:37:48,787 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:37:48,851 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:37:48,942 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:37:48,951 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:37:48,990 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:37:49,011 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:37:49,034 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:37:49,048 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:37:49,054 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:37:49,060 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:37:49,066 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:37:49,074 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:37:49,116 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:37:49,122 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:37:49,146 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:37:49,154 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:37:49,164 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:37:49,428 (MainThread): Using snowflake connection "master".
+2019-09-20 13:37:49,428 (MainThread): On master: select distinct schema_name
+    from OPA_DEV.information_schema.schemata
+    where catalog_name ilike 'OPA_DEV'
+2019-09-20 13:37:50,087 (MainThread): SQL status: SUCCESS 28 in 0.66 seconds
+2019-09-20 13:37:50,159 (MainThread): Using snowflake connection "master".
+2019-09-20 13:37:50,159 (MainThread): On master: BEGIN
+2019-09-20 13:37:50,286 (MainThread): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 13:37:50,287 (MainThread): Using snowflake connection "master".
+2019-09-20 13:37:50,287 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_DEV.information_schema.tables
+    where table_schema ilike 'opa_mrt_all'
+      and table_catalog ilike 'opa_dev'
+2019-09-20 13:37:51,629 (MainThread): SQL status: SUCCESS 19 in 1.34 seconds
+2019-09-20 13:37:51,655 (MainThread): On master: ROLLBACK
+2019-09-20 13:37:51,899 (MainThread): Using snowflake connection "master".
+2019-09-20 13:37:51,899 (MainThread): On master: BEGIN
+2019-09-20 13:37:52,029 (MainThread): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 13:37:52,030 (MainThread): On master: COMMIT
+2019-09-20 13:37:52,030 (MainThread): Using snowflake connection "master".
+2019-09-20 13:37:52,030 (MainThread): On master: COMMIT
+2019-09-20 13:37:52,222 (MainThread): SQL status: SUCCESS 1 in 0.19 seconds
+2019-09-20 13:37:52,223 (MainThread): 13:37:52 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:37:52,224 (MainThread): 13:37:52 | 
+2019-09-20 13:37:52,249 (Thread-1): 13:37:52 | 1 of 1 START view model OPA_MRT_ALL.test_bf_subset................... [RUN]
+2019-09-20 13:37:52,250 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:37:52,250 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:37:52,998 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 13:37:53,007 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:37:53,076 (Thread-1): Writing runtime SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:37:53,085 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:37:53,085 (Thread-1): On test_bf_subset: BEGIN
+2019-09-20 13:37:53,220 (Thread-1): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 13:37:53,221 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:37:53,221 (Thread-1): On test_bf_subset: create or replace view OPA_DEV.OPA_MRT_ALL.test_bf_subset as (
+    SELECT *
+FROM V_BOOKING_FACT
+WHERE bk_booking_type = 'UKATCOM|ACC'
+  );
+2019-09-20 13:37:56,279 (Thread-1): SQL status: SUCCESS 1 in 3.06 seconds
+2019-09-20 13:37:56,281 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 13:37:56,282 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:37:56,282 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 13:37:56,376 (Thread-1): SQL status: SUCCESS 1 in 0.09 seconds
+2019-09-20 13:37:56,384 (Thread-1): 13:37:56 | 1 of 1 OK created view model OPA_MRT_ALL.test_bf_subset.............. [SUCCESS 1 in 4.13s]
+2019-09-20 13:37:56,460 (MainThread): Using snowflake connection "master".
+2019-09-20 13:37:56,460 (MainThread): On master: BEGIN
+2019-09-20 13:37:56,613 (MainThread): SQL status: SUCCESS 1 in 0.15 seconds
+2019-09-20 13:37:56,614 (MainThread): On master: COMMIT
+2019-09-20 13:37:56,614 (MainThread): Using snowflake connection "master".
+2019-09-20 13:37:56,614 (MainThread): On master: COMMIT
+2019-09-20 13:37:56,933 (MainThread): SQL status: SUCCESS 1 in 0.32 seconds
+2019-09-20 13:37:56,934 (MainThread): 13:37:56 | 
+2019-09-20 13:37:56,935 (MainThread): 13:37:56 | Finished running 1 view model in 8.46s.
+2019-09-20 13:37:56,936 (MainThread): Connection 'master' was left open.
+2019-09-20 13:37:56,937 (MainThread): On master: Close
+2019-09-20 13:37:57,097 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:37:57,097 (MainThread): On test_bf_subset: Close
+2019-09-20 13:37:57,339 (MainThread): 
+2019-09-20 13:37:57,340 (MainThread): Completed successfully
+2019-09-20 13:37:57,341 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2019-09-20 13:37:57,342 (MainThread): Flushing usage events
+2019-09-20 13:40:26,495 (MainThread): Tracking: tracking
+2019-09-20 13:40:26,498 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAE308>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAE048>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C71988>]}
+2019-09-20 13:40:26,846 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:40:26,847 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61562), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:40:26,849 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:40:26,887 (MainThread): Parsing macros\core.sql
+2019-09-20 13:40:26,901 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:40:26,987 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:40:27,009 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:40:27,013 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:40:27,019 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:40:27,025 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:40:27,031 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:40:27,051 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:40:27,070 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:40:27,087 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:40:27,108 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:40:27,143 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:40:27,187 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:40:27,193 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:40:27,221 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:40:27,236 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:40:27,248 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:40:27,264 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:40:27,268 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:40:27,272 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:40:27,276 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:40:27,281 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:40:27,305 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:40:27,312 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:40:27,328 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:40:27,336 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:40:27,347 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:40:27,392 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 13:40:27,396 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:40:27,396 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:40:27,399 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:40:27,854 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:40:27,899 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:40:28,554 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:40:28,555 (MainThread): 
+2019-09-20 13:40:28,556 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 13:40:28,556 (MainThread): Re-using an available connection from the pool (formerly test_bf_subset).
+2019-09-20 13:40:28,602 (MainThread): Parsing macros\core.sql
+2019-09-20 13:40:28,615 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:40:28,705 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:40:28,733 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:40:28,738 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:40:28,748 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:40:28,762 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:40:28,776 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:40:28,781 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:40:28,814 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:40:28,830 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:40:28,847 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:40:28,891 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:40:28,934 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:40:28,939 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:40:28,979 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:40:28,996 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:40:29,010 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:40:29,023 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:40:29,029 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:40:29,032 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:40:29,036 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:40:29,044 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:40:29,088 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:40:29,094 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:40:29,110 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:40:29,115 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:40:29,126 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:40:29,394 (MainThread): Using snowflake connection "master".
+2019-09-20 13:40:29,394 (MainThread): On master: select distinct schema_name
+    from OPA_DEV.information_schema.schemata
+    where catalog_name ilike 'OPA_DEV'
+2019-09-20 13:40:30,010 (MainThread): SQL status: SUCCESS 28 in 0.62 seconds
+2019-09-20 13:40:30,078 (MainThread): Using snowflake connection "master".
+2019-09-20 13:40:30,078 (MainThread): On master: BEGIN
+2019-09-20 13:40:30,220 (MainThread): SQL status: SUCCESS 1 in 0.14 seconds
+2019-09-20 13:40:30,221 (MainThread): Using snowflake connection "master".
+2019-09-20 13:40:30,221 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_DEV.information_schema.tables
+    where table_schema ilike 'opa_mrt_all'
+      and table_catalog ilike 'opa_dev'
+2019-09-20 13:40:31,509 (MainThread): SQL status: SUCCESS 20 in 1.29 seconds
+2019-09-20 13:40:31,536 (MainThread): On master: ROLLBACK
+2019-09-20 13:40:31,689 (MainThread): Using snowflake connection "master".
+2019-09-20 13:40:31,689 (MainThread): On master: BEGIN
+2019-09-20 13:40:31,823 (MainThread): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 13:40:31,824 (MainThread): On master: COMMIT
+2019-09-20 13:40:31,824 (MainThread): Using snowflake connection "master".
+2019-09-20 13:40:31,824 (MainThread): On master: COMMIT
+2019-09-20 13:40:31,970 (MainThread): SQL status: SUCCESS 1 in 0.15 seconds
+2019-09-20 13:40:31,972 (MainThread): 13:40:31 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:40:31,981 (MainThread): 13:40:31 | 
+2019-09-20 13:40:32,030 (Thread-1): 13:40:32 | 1 of 1 START view model OPA_MRT_ALL.test_bf_subset................... [RUN]
+2019-09-20 13:40:32,041 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:40:32,042 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:40:32,779 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 13:40:32,789 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:40:32,853 (Thread-1): Writing runtime SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:40:32,857 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:40:32,858 (Thread-1): On test_bf_subset: BEGIN
+2019-09-20 13:40:33,314 (Thread-1): SQL status: SUCCESS 1 in 0.46 seconds
+2019-09-20 13:40:33,315 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:40:33,315 (Thread-1): On test_bf_subset: create or replace view OPA_DEV.OPA_MRT_ALL.test_bf_subset as (
+    SELECT *
+FROM V_BOOKING_FACT
+WHERE bk_booking_type = 'UKATCOM|ACC'
+  );
+2019-09-20 13:40:33,803 (Thread-1): SQL status: SUCCESS 1 in 0.49 seconds
+2019-09-20 13:40:33,805 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 13:40:33,805 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:40:33,805 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 13:40:33,906 (Thread-1): SQL status: SUCCESS 1 in 0.10 seconds
+2019-09-20 13:40:33,914 (Thread-1): 13:40:33 | 1 of 1 OK created view model OPA_MRT_ALL.test_bf_subset.............. [SUCCESS 1 in 1.87s]
+2019-09-20 13:40:33,934 (MainThread): Using snowflake connection "master".
+2019-09-20 13:40:33,934 (MainThread): On master: BEGIN
+2019-09-20 13:40:34,077 (MainThread): SQL status: SUCCESS 1 in 0.14 seconds
+2019-09-20 13:40:34,078 (MainThread): On master: COMMIT
+2019-09-20 13:40:34,078 (MainThread): Using snowflake connection "master".
+2019-09-20 13:40:34,078 (MainThread): On master: COMMIT
+2019-09-20 13:40:34,471 (MainThread): SQL status: SUCCESS 1 in 0.39 seconds
+2019-09-20 13:40:34,472 (MainThread): 13:40:34 | 
+2019-09-20 13:40:34,472 (MainThread): 13:40:34 | Finished running 1 view model in 5.91s.
+2019-09-20 13:40:34,473 (MainThread): Connection 'master' was left open.
+2019-09-20 13:40:34,473 (MainThread): On master: Close
+2019-09-20 13:40:34,643 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:40:34,644 (MainThread): On test_bf_subset: Close
+2019-09-20 13:40:34,947 (MainThread): 
+2019-09-20 13:40:34,948 (MainThread): Completed successfully
+2019-09-20 13:40:34,949 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2019-09-20 13:40:34,950 (MainThread): Flushing usage events
+2019-09-20 13:40:59,514 (MainThread): Tracking: tracking
+2019-09-20 13:40:59,517 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C84A48>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000004974948>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000000049C1308>]}
+2019-09-20 13:40:59,799 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:40:59,800 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61595), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:40:59,801 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:40:59,837 (MainThread): Parsing macros\core.sql
+2019-09-20 13:40:59,850 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:40:59,930 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:40:59,952 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:40:59,956 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:40:59,963 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:40:59,968 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:40:59,972 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:40:59,976 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:40:59,994 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:41:00,009 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:41:00,026 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:41:00,059 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:41:00,098 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:41:00,103 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:41:00,130 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:41:00,143 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:41:00,152 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:41:00,166 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:41:00,174 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:41:00,178 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:41:00,183 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:41:00,189 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:41:00,214 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:41:00,220 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:41:00,235 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:41:00,240 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:41:00,249 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:41:00,306 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 13:41:00,309 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:41:00,310 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:41:00,313 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:41:00,727 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:41:00,783 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:41:01,338 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:41:01,339 (MainThread): 
+2019-09-20 13:41:01,340 (MainThread): 13:41:01 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:41:01,340 (MainThread): 13:41:01 | 
+2019-09-20 13:41:01,368 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:41:01,368 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:41:02,194 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 13:41:02,204 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:41:02,324 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:41:02,329 (MainThread): On test_bf_subset: Close
+2019-09-20 13:41:02,417 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:41:02,417 (MainThread): On test_bf_subset: Close
+2019-09-20 13:41:02,571 (MainThread): 13:41:02 | Done.
+2019-09-20 13:41:02,604 (MainThread): Flushing usage events
+2019-09-20 13:41:33,594 (MainThread): Tracking: tracking
+2019-09-20 13:41:33,597 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAF388>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAFD88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C82CC8>]}
+2019-09-20 13:41:33,927 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:41:33,928 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61624), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:41:33,930 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:41:33,967 (MainThread): Parsing macros\core.sql
+2019-09-20 13:41:33,981 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:41:34,057 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:41:34,077 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:41:34,082 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:41:34,089 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:41:34,096 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:41:34,102 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:41:34,106 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:41:34,123 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:41:34,138 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:41:34,153 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:41:34,185 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:41:34,223 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:41:34,228 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:41:34,253 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:41:34,268 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:41:34,285 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:41:34,302 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:41:34,307 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:41:34,311 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:41:34,315 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:41:34,321 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:41:34,344 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:41:34,349 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:41:34,366 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:41:34,371 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:41:34,379 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:41:34,412 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 13:41:34,415 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:41:34,415 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:41:34,418 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:41:34,911 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:41:34,944 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:41:35,740 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:41:35,742 (MainThread): 
+2019-09-20 13:41:35,742 (MainThread): 13:41:35 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:41:35,743 (MainThread): 13:41:35 | 
+2019-09-20 13:41:35,758 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:41:35,758 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:41:36,482 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 13:41:36,490 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:41:36,569 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:41:36,570 (MainThread): On test_bf_subset: Close
+2019-09-20 13:41:36,732 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:41:36,732 (MainThread): On test_bf_subset: Close
+2019-09-20 13:41:36,815 (MainThread): 13:41:36 | Done.
+2019-09-20 13:41:36,815 (MainThread): Flushing usage events
+2019-09-20 13:41:52,571 (MainThread): Tracking: tracking
+2019-09-20 13:41:52,573 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000004935FC8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C85548>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000004985508>]}
+2019-09-20 13:41:52,856 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 13:41:52,857 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 61641), raddr=('54.164.98.48', 443)>
+
+2019-09-20 13:41:52,859 (MainThread): Error sending message, disabling tracking
+2019-09-20 13:41:52,893 (MainThread): Parsing macros\core.sql
+2019-09-20 13:41:52,908 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:41:52,990 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:41:53,012 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:41:53,021 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:41:53,031 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:41:53,040 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:41:53,045 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:41:53,068 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:41:53,089 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:41:53,107 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:41:53,126 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:41:53,163 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:41:53,204 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:41:53,210 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:41:53,238 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:41:53,251 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:41:53,265 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:41:53,280 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:41:53,284 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:41:53,288 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:41:53,292 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:41:53,297 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:41:53,320 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:41:53,327 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:41:53,345 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:41:53,350 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:41:53,361 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:41:53,402 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 13:41:53,403 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:41:53,404 (MainThread): Opening a new connection, currently in state init
+2019-09-20 13:41:53,407 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 13:41:53,847 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 13:41:53,879 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 13:41:54,404 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 13:41:54,406 (MainThread): 
+2019-09-20 13:41:54,406 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 13:41:54,407 (MainThread): Re-using an available connection from the pool (formerly test_bf_subset).
+2019-09-20 13:41:54,452 (MainThread): Parsing macros\core.sql
+2019-09-20 13:41:54,463 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 13:41:54,556 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 13:41:54,601 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 13:41:54,606 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 13:41:54,612 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 13:41:54,618 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 13:41:54,623 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 13:41:54,629 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 13:41:54,652 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 13:41:54,673 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 13:41:54,694 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 13:41:54,731 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 13:41:54,792 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 13:41:54,798 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 13:41:54,861 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 13:41:54,875 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 13:41:54,888 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 13:41:54,904 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 13:41:54,909 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 13:41:54,914 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 13:41:54,920 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 13:41:54,928 (MainThread): Parsing macros\adapters.sql
+2019-09-20 13:41:54,954 (MainThread): Parsing macros\catalog.sql
+2019-09-20 13:41:54,961 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 13:41:54,989 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 13:41:54,994 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 13:41:55,004 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 13:41:55,259 (MainThread): Using snowflake connection "master".
+2019-09-20 13:41:55,259 (MainThread): On master: select distinct schema_name
+    from OPA_DEV.information_schema.schemata
+    where catalog_name ilike 'OPA_DEV'
+2019-09-20 13:41:55,840 (MainThread): SQL status: SUCCESS 28 in 0.58 seconds
+2019-09-20 13:41:55,910 (MainThread): Using snowflake connection "master".
+2019-09-20 13:41:55,911 (MainThread): On master: BEGIN
+2019-09-20 13:41:56,044 (MainThread): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 13:41:56,044 (MainThread): Using snowflake connection "master".
+2019-09-20 13:41:56,045 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_DEV.information_schema.tables
+    where table_schema ilike 'opa_mrt_all'
+      and table_catalog ilike 'opa_dev'
+2019-09-20 13:41:57,578 (MainThread): SQL status: SUCCESS 20 in 1.53 seconds
+2019-09-20 13:41:57,607 (MainThread): On master: ROLLBACK
+2019-09-20 13:41:57,779 (MainThread): Using snowflake connection "master".
+2019-09-20 13:41:57,779 (MainThread): On master: BEGIN
+2019-09-20 13:41:57,925 (MainThread): SQL status: SUCCESS 1 in 0.15 seconds
+2019-09-20 13:41:57,926 (MainThread): On master: COMMIT
+2019-09-20 13:41:57,927 (MainThread): Using snowflake connection "master".
+2019-09-20 13:41:57,927 (MainThread): On master: COMMIT
+2019-09-20 13:41:58,095 (MainThread): SQL status: SUCCESS 1 in 0.17 seconds
+2019-09-20 13:41:58,096 (MainThread): 13:41:58 | Concurrency: 1 threads (target='dev')
+2019-09-20 13:41:58,097 (MainThread): 13:41:58 | 
+2019-09-20 13:41:58,101 (Thread-1): 13:41:58 | 1 of 1 START view model OPA_MRT_ALL.test_bf_subset................... [RUN]
+2019-09-20 13:41:58,102 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 13:41:58,103 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 13:41:58,599 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 13:41:58,608 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:41:58,676 (Thread-1): Writing runtime SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 13:41:58,682 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:41:58,682 (Thread-1): On test_bf_subset: BEGIN
+2019-09-20 13:41:58,846 (Thread-1): SQL status: SUCCESS 1 in 0.16 seconds
+2019-09-20 13:41:58,846 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:41:58,846 (Thread-1): On test_bf_subset: create or replace view OPA_DEV.OPA_MRT_ALL.test_bf_subset as (
+    SELECT *
+FROM opa_mrt_all.V_BOOKING_FACT
+WHERE bk_booking_type = 'UKATCOM|ACC'
+  );
+2019-09-20 13:41:59,395 (Thread-1): SQL status: SUCCESS 1 in 0.55 seconds
+2019-09-20 13:41:59,397 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 13:41:59,398 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 13:41:59,398 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 13:41:59,489 (Thread-1): SQL status: SUCCESS 1 in 0.09 seconds
+2019-09-20 13:41:59,500 (Thread-1): 13:41:59 | 1 of 1 OK created view model OPA_MRT_ALL.test_bf_subset.............. [SUCCESS 1 in 1.39s]
+2019-09-20 13:41:59,589 (MainThread): Using snowflake connection "master".
+2019-09-20 13:41:59,612 (MainThread): On master: BEGIN
+2019-09-20 13:41:59,797 (MainThread): SQL status: SUCCESS 1 in 0.18 seconds
+2019-09-20 13:41:59,797 (MainThread): On master: COMMIT
+2019-09-20 13:41:59,798 (MainThread): Using snowflake connection "master".
+2019-09-20 13:41:59,798 (MainThread): On master: COMMIT
+2019-09-20 13:41:59,977 (MainThread): SQL status: SUCCESS 1 in 0.18 seconds
+2019-09-20 13:41:59,978 (MainThread): 13:41:59 | 
+2019-09-20 13:41:59,979 (MainThread): 13:41:59 | Finished running 1 view model in 5.57s.
+2019-09-20 13:41:59,980 (MainThread): Connection 'master' was left open.
+2019-09-20 13:41:59,981 (MainThread): On master: Close
+2019-09-20 13:42:00,156 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 13:42:00,157 (MainThread): On test_bf_subset: Close
+2019-09-20 13:42:00,310 (MainThread): 
+2019-09-20 13:42:00,311 (MainThread): Completed successfully
+2019-09-20 13:42:00,312 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2019-09-20 13:42:00,313 (MainThread): Flushing usage events
+2019-09-20 14:04:18,061 (MainThread): Tracking: tracking
+2019-09-20 14:04:18,067 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAED88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C79A48>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C70CC8>]}
+2019-09-20 14:04:18,423 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:04:18,424 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62451), raddr=('54.174.31.151', 443)>
+
+2019-09-20 14:04:18,426 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:04:18,468 (MainThread): Parsing macros\core.sql
+2019-09-20 14:04:18,484 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:04:18,556 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:04:18,576 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:04:18,580 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:04:18,589 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:04:18,597 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:04:18,603 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:04:18,609 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:04:18,627 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:04:18,645 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:04:18,662 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:04:18,706 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:04:18,754 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:04:18,763 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:04:18,794 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:04:18,813 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:04:18,831 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:04:18,845 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:04:18,851 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:04:18,857 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:04:18,862 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:04:18,868 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:04:18,898 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:04:18,905 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:04:18,939 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:04:18,947 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:04:18,957 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:04:18,996 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:04:18,999 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:04:18,999 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:04:19,003 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:04:19,484 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:04:19,514 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:04:20,150 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:04:20,152 (MainThread): 
+2019-09-20 14:04:20,153 (MainThread): 14:04:20 | Concurrency: 1 threads (target='pat')
+2019-09-20 14:04:20,154 (MainThread): 14:04:20 | 
+2019-09-20 14:04:20,165 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:04:20,166 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:04:20,872 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:04:20,880 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:04:20,980 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:04:20,981 (MainThread): On test_bf_subset: Close
+2019-09-20 14:04:21,090 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:04:21,091 (MainThread): On test_bf_subset: Close
+2019-09-20 14:04:21,201 (MainThread): 14:04:21 | Done.
+2019-09-20 14:04:21,201 (MainThread): Flushing usage events
+2019-09-20 14:04:42,896 (MainThread): Tracking: tracking
+2019-09-20 14:04:42,900 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAE6C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CAEAC8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C71108>]}
+2019-09-20 14:04:43,176 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:04:43,177 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62467), raddr=('54.174.31.151', 443)>
+
+2019-09-20 14:04:43,179 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:04:43,216 (MainThread): Parsing macros\core.sql
+2019-09-20 14:04:43,229 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:04:43,293 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:04:43,315 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:04:43,319 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:04:43,325 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:04:43,331 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:04:43,336 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:04:43,340 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:04:43,357 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:04:43,369 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:04:43,383 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:04:43,413 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:04:43,453 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:04:43,458 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:04:43,485 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:04:43,500 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:04:43,513 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:04:43,524 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:04:43,530 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:04:43,534 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:04:43,537 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:04:43,543 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:04:43,565 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:04:43,571 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:04:43,590 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:04:43,596 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:04:43,605 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:04:43,648 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:04:43,651 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:04:43,652 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:04:43,654 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:04:44,057 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:04:44,091 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:04:44,677 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:04:44,679 (MainThread): 
+2019-09-20 14:04:44,680 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 14:04:44,680 (MainThread): Re-using an available connection from the pool (formerly test_bf_subset).
+2019-09-20 14:04:44,725 (MainThread): Parsing macros\core.sql
+2019-09-20 14:04:44,740 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:04:44,837 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:04:44,860 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:04:44,866 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:04:44,874 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:04:44,880 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:04:44,887 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:04:44,898 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:04:44,919 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:04:44,940 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:04:44,957 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:04:45,018 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:04:45,073 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:04:45,079 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:04:45,116 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:04:45,134 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:04:45,145 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:04:45,159 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:04:45,164 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:04:45,169 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:04:45,173 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:04:45,185 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:04:45,211 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:04:45,219 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:04:45,237 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:04:45,242 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:04:45,254 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:04:45,523 (MainThread): Using snowflake connection "master".
+2019-09-20 14:04:45,523 (MainThread): On master: select distinct schema_name
+    from OPA_PAT.information_schema.schemata
+    where catalog_name ilike 'OPA_PAT'
+2019-09-20 14:04:46,332 (MainThread): SQL status: SUCCESS 19 in 0.81 seconds
+2019-09-20 14:04:46,394 (MainThread): Using snowflake connection "master".
+2019-09-20 14:04:46,394 (MainThread): On master: BEGIN
+2019-09-20 14:04:46,528 (MainThread): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 14:04:46,529 (MainThread): Using snowflake connection "master".
+2019-09-20 14:04:46,529 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_PAT.information_schema.tables
+    where table_schema ilike 'opa_mrt_all'
+      and table_catalog ilike 'opa_pat'
+2019-09-20 14:04:48,058 (MainThread): SQL status: SUCCESS 14 in 1.53 seconds
+2019-09-20 14:04:48,075 (MainThread): On master: ROLLBACK
+2019-09-20 14:04:48,290 (MainThread): Using snowflake connection "master".
+2019-09-20 14:04:48,291 (MainThread): On master: BEGIN
+2019-09-20 14:04:48,456 (MainThread): SQL status: SUCCESS 1 in 0.16 seconds
+2019-09-20 14:04:48,457 (MainThread): On master: COMMIT
+2019-09-20 14:04:48,457 (MainThread): Using snowflake connection "master".
+2019-09-20 14:04:48,458 (MainThread): On master: COMMIT
+2019-09-20 14:04:48,679 (MainThread): SQL status: SUCCESS 1 in 0.22 seconds
+2019-09-20 14:04:48,680 (MainThread): 14:04:48 | Concurrency: 1 threads (target='pat')
+2019-09-20 14:04:48,681 (MainThread): 14:04:48 | 
+2019-09-20 14:04:48,688 (Thread-1): 14:04:48 | 1 of 1 START view model OPA_MRT_ALL.test_bf_subset................... [RUN]
+2019-09-20 14:04:48,690 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:04:48,690 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:04:49,579 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:04:49,588 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:04:49,656 (Thread-1): Writing runtime SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:04:49,665 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:04:49,665 (Thread-1): On test_bf_subset: BEGIN
+2019-09-20 14:04:49,824 (Thread-1): SQL status: SUCCESS 1 in 0.16 seconds
+2019-09-20 14:04:49,825 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:04:49,825 (Thread-1): On test_bf_subset: create or replace view OPA_PAT.OPA_MRT_ALL.test_bf_subset as (
+    SELECT *
+FROM opa_mrt_all.V_BOOKING_FACT
+WHERE bk_booking_type = 'UKATCOM|ACC'
+  );
+2019-09-20 14:04:50,159 (Thread-1): Snowflake error: 003001 (42501): 018f0370-00fb-db24-0000-0e290152d3b2: SQL access control error:
+Insufficient privileges to operate on schema 'OPA_MRT_ALL'
+2019-09-20 14:04:50,159 (Thread-1): On test_bf_subset: ROLLBACK
+2019-09-20 14:04:50,344 (Thread-1): 14:04:50 | 1 of 1 ERROR creating view model OPA_MRT_ALL.test_bf_subset.......... [ERROR in 1.65s]
+2019-09-20 14:04:50,445 (MainThread): Using snowflake connection "master".
+2019-09-20 14:04:50,446 (MainThread): On master: BEGIN
+2019-09-20 14:04:50,681 (MainThread): SQL status: SUCCESS 1 in 0.24 seconds
+2019-09-20 14:04:50,682 (MainThread): On master: COMMIT
+2019-09-20 14:04:50,682 (MainThread): Using snowflake connection "master".
+2019-09-20 14:04:50,683 (MainThread): On master: COMMIT
+2019-09-20 14:04:51,117 (MainThread): SQL status: SUCCESS 1 in 0.43 seconds
+2019-09-20 14:04:51,118 (MainThread): 14:04:51 | 
+2019-09-20 14:04:51,119 (MainThread): 14:04:51 | Finished running 1 view model in 6.44s.
+2019-09-20 14:04:51,119 (MainThread): Connection 'master' was left open.
+2019-09-20 14:04:51,120 (MainThread): On master: Close
+2019-09-20 14:04:51,340 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:04:51,341 (MainThread): On test_bf_subset: Close
+2019-09-20 14:04:51,626 (MainThread): 
+2019-09-20 14:04:51,626 (MainThread): Completed with 1 error and 0 warnings:
+2019-09-20 14:04:51,628 (MainThread): 
+2019-09-20 14:04:51,629 (MainThread): Database Error in model test_bf_subset (models\test_bf_subset.sql)
+2019-09-20 14:04:51,630 (MainThread):   003001 (42501): 018f0370-00fb-db24-0000-0e290152d3b2: SQL access control error:
+2019-09-20 14:04:51,631 (MainThread):   Insufficient privileges to operate on schema 'OPA_MRT_ALL'
+2019-09-20 14:04:51,633 (MainThread):   compiled SQL at target\compiled\dbt_test\test_bf_subset.sql
+2019-09-20 14:04:51,634 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2019-09-20 14:04:51,634 (MainThread): Flushing usage events
+2019-09-20 14:07:27,674 (MainThread): Tracking: tracking
+2019-09-20 14:07:27,731 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C92188>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C92688>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C6C408>]}
+2019-09-20 14:07:28,182 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:07:28,183 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62542), raddr=('54.174.31.151', 443)>
+
+2019-09-20 14:07:28,185 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:07:28,226 (MainThread): Parsing macros\core.sql
+2019-09-20 14:07:28,244 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:07:28,331 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:07:28,353 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:07:28,359 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:07:28,367 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:07:28,379 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:07:28,386 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:07:28,391 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:07:28,411 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:07:28,431 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:07:28,449 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:07:28,494 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:07:28,569 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:07:28,575 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:07:28,620 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:07:28,639 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:07:28,668 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:07:28,683 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:07:28,689 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:07:28,694 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:07:28,699 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:07:28,705 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:07:28,738 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:07:28,747 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:07:28,771 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:07:28,781 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:07:28,791 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:07:28,844 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:07:28,847 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:07:28,848 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:07:28,851 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:07:29,677 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:07:29,786 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:07:30,549 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:07:30,550 (MainThread): 
+2019-09-20 14:07:30,551 (MainThread): 14:07:30 | Concurrency: 1 threads (target='dev')
+2019-09-20 14:07:30,551 (MainThread): 14:07:30 | 
+2019-09-20 14:07:30,629 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:07:30,629 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:07:31,363 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:07:31,372 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:07:31,404 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:07:31,406 (MainThread): On test_bf_subset: Close
+2019-09-20 14:07:31,528 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:07:31,529 (MainThread): On test_bf_subset: Close
+2019-09-20 14:07:31,679 (MainThread): 14:07:31 | Done.
+2019-09-20 14:07:31,680 (MainThread): Flushing usage events
+2019-09-20 14:07:50,923 (MainThread): Tracking: tracking
+2019-09-20 14:07:50,927 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000000000573ACC8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000000049BF988>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C6CD88>]}
+2019-09-20 14:07:51,217 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:07:51,217 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62559), raddr=('54.174.31.151', 443)>
+
+2019-09-20 14:07:51,219 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:07:51,256 (MainThread): Parsing macros\core.sql
+2019-09-20 14:07:51,270 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:07:51,352 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:07:51,374 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:07:51,378 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:07:51,385 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:07:51,393 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:07:51,403 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:07:51,407 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:07:51,429 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:07:51,448 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:07:51,468 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:07:51,507 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:07:51,550 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:07:51,557 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:07:51,584 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:07:51,600 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:07:51,615 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:07:51,630 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:07:51,636 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:07:51,640 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:07:51,646 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:07:51,655 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:07:51,680 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:07:51,686 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:07:51,701 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:07:51,706 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:07:51,716 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:07:51,765 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:07:51,768 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:07:51,768 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:07:51,771 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:07:52,210 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:07:52,253 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:07:53,059 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:07:53,061 (MainThread): 
+2019-09-20 14:07:53,062 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 14:07:53,063 (MainThread): Re-using an available connection from the pool (formerly test_bf_subset).
+2019-09-20 14:07:53,113 (MainThread): Parsing macros\core.sql
+2019-09-20 14:07:53,123 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:07:53,217 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:07:53,240 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:07:53,253 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:07:53,261 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:07:53,267 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:07:53,273 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:07:53,278 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:07:53,299 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:07:53,323 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:07:53,344 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:07:53,387 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:07:53,469 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:07:53,475 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:07:53,505 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:07:53,525 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:07:53,548 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:07:53,562 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:07:53,567 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:07:53,571 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:07:53,575 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:07:53,580 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:07:53,608 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:07:53,614 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:07:53,631 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:07:53,636 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:07:53,644 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:07:53,875 (MainThread): Using snowflake connection "master".
+2019-09-20 14:07:53,875 (MainThread): On master: select distinct schema_name
+    from OPA_DEV.information_schema.schemata
+    where catalog_name ilike 'OPA_DEV'
+2019-09-20 14:07:54,538 (MainThread): SQL status: SUCCESS 29 in 0.66 seconds
+2019-09-20 14:07:54,625 (MainThread): Using snowflake connection "master".
+2019-09-20 14:07:54,625 (MainThread): On master: BEGIN
+2019-09-20 14:07:54,834 (MainThread): SQL status: SUCCESS 1 in 0.21 seconds
+2019-09-20 14:07:54,836 (MainThread): Using snowflake connection "master".
+2019-09-20 14:07:54,836 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_DEV.information_schema.tables
+    where table_schema ilike 'dbt_test'
+      and table_catalog ilike 'opa_dev'
+2019-09-20 14:07:56,634 (MainThread): SQL status: SUCCESS 0 in 1.80 seconds
+2019-09-20 14:07:56,637 (MainThread): On master: ROLLBACK
+2019-09-20 14:07:56,799 (MainThread): Using snowflake connection "master".
+2019-09-20 14:07:56,800 (MainThread): On master: BEGIN
+2019-09-20 14:07:56,924 (MainThread): SQL status: SUCCESS 1 in 0.12 seconds
+2019-09-20 14:07:56,925 (MainThread): On master: COMMIT
+2019-09-20 14:07:56,925 (MainThread): Using snowflake connection "master".
+2019-09-20 14:07:56,925 (MainThread): On master: COMMIT
+2019-09-20 14:07:57,107 (MainThread): SQL status: SUCCESS 1 in 0.18 seconds
+2019-09-20 14:07:57,108 (MainThread): 14:07:57 | Concurrency: 1 threads (target='dev')
+2019-09-20 14:07:57,109 (MainThread): 14:07:57 | 
+2019-09-20 14:07:57,132 (Thread-1): 14:07:57 | 1 of 1 START view model DBT_TEST.test_bf_subset...................... [RUN]
+2019-09-20 14:07:57,134 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:07:57,134 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:07:57,921 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:07:57,930 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:07:58,003 (Thread-1): Writing runtime SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:07:58,012 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:07:58,012 (Thread-1): On test_bf_subset: BEGIN
+2019-09-20 14:07:58,197 (Thread-1): SQL status: SUCCESS 1 in 0.19 seconds
+2019-09-20 14:07:58,198 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:07:58,198 (Thread-1): On test_bf_subset: create or replace view OPA_DEV.DBT_TEST.test_bf_subset as (
+    SELECT *
+FROM opa_mrt_all.V_BOOKING_FACT
+WHERE bk_booking_type = 'UKATCOM|ACC'
+  );
+2019-09-20 14:08:00,067 (Thread-1): SQL status: SUCCESS 1 in 1.87 seconds
+2019-09-20 14:08:00,069 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 14:08:00,070 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:08:00,070 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 14:08:00,212 (Thread-1): SQL status: SUCCESS 1 in 0.14 seconds
+2019-09-20 14:08:00,222 (Thread-1): 14:08:00 | 1 of 1 OK created view model DBT_TEST.test_bf_subset................. [SUCCESS 1 in 3.09s]
+2019-09-20 14:08:00,245 (MainThread): Using snowflake connection "master".
+2019-09-20 14:08:00,246 (MainThread): On master: BEGIN
+2019-09-20 14:08:00,430 (MainThread): SQL status: SUCCESS 1 in 0.18 seconds
+2019-09-20 14:08:00,431 (MainThread): On master: COMMIT
+2019-09-20 14:08:00,431 (MainThread): Using snowflake connection "master".
+2019-09-20 14:08:00,431 (MainThread): On master: COMMIT
+2019-09-20 14:08:00,621 (MainThread): SQL status: SUCCESS 1 in 0.19 seconds
+2019-09-20 14:08:00,623 (MainThread): 14:08:00 | 
+2019-09-20 14:08:00,624 (MainThread): 14:08:00 | Finished running 1 view model in 7.56s.
+2019-09-20 14:08:00,625 (MainThread): Connection 'master' was left open.
+2019-09-20 14:08:00,626 (MainThread): On master: Close
+2019-09-20 14:08:00,785 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:08:00,786 (MainThread): On test_bf_subset: Close
+2019-09-20 14:08:01,031 (MainThread): 
+2019-09-20 14:08:01,032 (MainThread): Completed successfully
+2019-09-20 14:08:01,033 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2019-09-20 14:08:01,034 (MainThread): Flushing usage events
+2019-09-20 14:12:41,864 (MainThread): Tracking: tracking
+2019-09-20 14:12:41,868 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CBE0C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C928C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C82EC8>]}
+2019-09-20 14:12:42,205 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:12:42,206 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62791), raddr=('54.174.31.151', 443)>
+
+2019-09-20 14:12:42,208 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:12:42,250 (MainThread): Parsing macros\core.sql
+2019-09-20 14:12:42,267 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:12:42,352 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:12:42,376 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:12:42,382 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:12:42,390 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:12:42,397 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:12:42,404 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:12:42,409 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:12:42,426 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:12:42,443 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:12:42,461 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:12:42,496 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:12:42,535 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:12:42,543 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:12:42,568 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:12:42,583 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:12:42,596 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:12:42,613 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:12:42,619 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:12:42,624 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:12:42,629 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:12:42,637 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:12:42,681 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:12:42,689 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:12:42,707 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:12:42,714 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:12:42,725 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:12:42,769 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:12:42,773 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:12:42,773 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:12:42,777 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:12:43,353 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:12:43,388 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:12:44,278 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:12:44,279 (MainThread): 
+2019-09-20 14:12:44,280 (MainThread): 14:12:44 | Concurrency: 1 threads (target='dev')
+2019-09-20 14:12:44,281 (MainThread): 14:12:44 | 
+2019-09-20 14:12:44,290 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:12:44,291 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:12:45,309 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:12:45,319 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:12:45,404 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:12:45,405 (MainThread): On test_bf_subset: Close
+2019-09-20 14:12:45,496 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:12:45,497 (MainThread): On test_bf_subset: Close
+2019-09-20 14:12:45,665 (MainThread): 14:12:45 | Done.
+2019-09-20 14:12:45,667 (MainThread): Flushing usage events
+2019-09-20 14:13:00,381 (MainThread): Tracking: tracking
+2019-09-20 14:13:00,385 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CBC408>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C91148>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C8E3C8>]}
+2019-09-20 14:13:00,663 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:13:00,664 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62808), raddr=('54.174.31.151', 443)>
+
+2019-09-20 14:13:00,665 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:13:00,702 (MainThread): Parsing macros\core.sql
+2019-09-20 14:13:00,716 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:13:00,788 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:13:00,805 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:13:00,809 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:13:00,816 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:13:00,823 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:13:00,828 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:13:00,833 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:13:00,850 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:13:00,865 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:13:00,885 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:13:00,922 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:13:00,968 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:13:00,976 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:13:01,005 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:13:01,024 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:13:01,037 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:13:01,049 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:13:01,055 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:13:01,059 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:13:01,063 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:13:01,068 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:13:01,094 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:13:01,099 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:13:01,116 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:13:01,121 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:13:01,130 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:13:01,216 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:13:01,219 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:13:01,219 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:13:01,222 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:13:01,647 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:13:01,686 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:13:02,320 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:13:02,322 (MainThread): 
+2019-09-20 14:13:02,322 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 14:13:02,323 (MainThread): Re-using an available connection from the pool (formerly test_bf_subset).
+2019-09-20 14:13:02,358 (MainThread): Parsing macros\core.sql
+2019-09-20 14:13:02,370 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:13:02,463 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:13:02,490 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:13:02,498 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:13:02,507 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:13:02,515 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:13:02,522 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:13:02,527 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:13:02,545 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:13:02,564 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:13:02,583 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:13:02,619 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:13:02,694 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:13:02,704 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:13:02,730 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:13:02,746 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:13:02,762 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:13:02,774 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:13:02,780 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:13:02,783 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:13:02,787 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:13:02,793 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:13:02,836 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:13:02,842 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:13:02,859 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:13:02,867 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:13:02,875 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:13:03,122 (MainThread): Using snowflake connection "master".
+2019-09-20 14:13:03,123 (MainThread): On master: select distinct schema_name
+    from OPA_DEV.information_schema.schemata
+    where catalog_name ilike 'OPA_DEV'
+2019-09-20 14:13:03,659 (MainThread): SQL status: SUCCESS 29 in 0.54 seconds
+2019-09-20 14:13:03,732 (MainThread): Using snowflake connection "master".
+2019-09-20 14:13:03,732 (MainThread): On master: BEGIN
+2019-09-20 14:13:03,885 (MainThread): SQL status: SUCCESS 1 in 0.15 seconds
+2019-09-20 14:13:03,886 (MainThread): Using snowflake connection "master".
+2019-09-20 14:13:03,886 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_DEV.information_schema.tables
+    where table_schema ilike 'dbt_test'
+      and table_catalog ilike 'opa_dev'
+2019-09-20 14:13:05,232 (MainThread): SQL status: SUCCESS 1 in 1.35 seconds
+2019-09-20 14:13:05,235 (MainThread): On master: ROLLBACK
+2019-09-20 14:13:05,414 (MainThread): Using snowflake connection "master".
+2019-09-20 14:13:05,414 (MainThread): On master: BEGIN
+2019-09-20 14:13:05,536 (MainThread): SQL status: SUCCESS 1 in 0.12 seconds
+2019-09-20 14:13:05,537 (MainThread): On master: COMMIT
+2019-09-20 14:13:05,537 (MainThread): Using snowflake connection "master".
+2019-09-20 14:13:05,537 (MainThread): On master: COMMIT
+2019-09-20 14:13:05,698 (MainThread): SQL status: SUCCESS 1 in 0.16 seconds
+2019-09-20 14:13:05,699 (MainThread): 14:13:05 | Concurrency: 1 threads (target='dev')
+2019-09-20 14:13:05,700 (MainThread): 14:13:05 | 
+2019-09-20 14:13:05,718 (Thread-1): 14:13:05 | 1 of 1 START view model DBT_TEST.test_bf_subset...................... [RUN]
+2019-09-20 14:13:05,722 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:13:05,722 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:13:06,432 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:13:06,442 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:13:06,506 (Thread-1): Writing runtime SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:13:06,544 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:13:06,545 (Thread-1): On test_bf_subset: BEGIN
+2019-09-20 14:13:06,688 (Thread-1): SQL status: SUCCESS 1 in 0.14 seconds
+2019-09-20 14:13:06,688 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:13:06,689 (Thread-1): On test_bf_subset: create or replace view OPA_DEV.DBT_TEST.test_bf_subset as (
+    SELECT *
+FROM opa_mrt_all.V_BOOKING_FACT
+WHERE bk_booking_type = 'UKATCOM|ACC'
+  );
+2019-09-20 14:13:07,322 (Thread-1): SQL status: SUCCESS 1 in 0.63 seconds
+2019-09-20 14:13:07,325 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 14:13:07,325 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:13:07,325 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 14:13:07,602 (Thread-1): SQL status: SUCCESS 1 in 0.28 seconds
+2019-09-20 14:13:07,612 (Thread-1): 14:13:07 | 1 of 1 OK created view model DBT_TEST.test_bf_subset................. [SUCCESS 1 in 1.89s]
+2019-09-20 14:13:07,644 (MainThread): Using snowflake connection "master".
+2019-09-20 14:13:07,645 (MainThread): On master: BEGIN
+2019-09-20 14:13:07,774 (MainThread): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 14:13:07,775 (MainThread): On master: COMMIT
+2019-09-20 14:13:07,776 (MainThread): Using snowflake connection "master".
+2019-09-20 14:13:07,776 (MainThread): On master: COMMIT
+2019-09-20 14:13:07,964 (MainThread): SQL status: SUCCESS 1 in 0.19 seconds
+2019-09-20 14:13:07,965 (MainThread): 14:13:07 | 
+2019-09-20 14:13:07,966 (MainThread): 14:13:07 | Finished running 1 view model in 5.64s.
+2019-09-20 14:13:07,967 (MainThread): Connection 'master' was left open.
+2019-09-20 14:13:07,968 (MainThread): On master: Close
+2019-09-20 14:13:08,242 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:13:08,243 (MainThread): On test_bf_subset: Close
+2019-09-20 14:13:08,413 (MainThread): 
+2019-09-20 14:13:08,413 (MainThread): Completed successfully
+2019-09-20 14:13:08,415 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2019-09-20 14:13:08,416 (MainThread): Flushing usage events
+2019-09-20 14:15:05,313 (MainThread): Tracking: tracking
+2019-09-20 14:15:05,316 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CBC0C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C8E448>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C6BC88>]}
+2019-09-20 14:15:05,642 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:15:05,643 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62902), raddr=('54.164.98.48', 443)>
+
+2019-09-20 14:15:05,645 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:15:05,684 (MainThread): Parsing macros\core.sql
+2019-09-20 14:15:05,698 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:15:05,770 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:15:05,789 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:15:05,793 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:15:05,799 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:15:05,806 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:15:05,812 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:15:05,817 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:15:05,834 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:15:05,850 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:15:05,865 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:15:05,896 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:15:05,935 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:15:05,941 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:15:05,967 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:15:05,981 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:15:05,993 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:15:06,006 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:15:06,012 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:15:06,016 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:15:06,021 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:15:06,027 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:15:06,053 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:15:06,060 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:15:06,075 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:15:06,082 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:15:06,092 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:15:06,127 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:15:06,130 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:15:06,130 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:15:06,133 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:15:06,566 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:15:06,594 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:15:07,153 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:15:07,155 (MainThread): 
+2019-09-20 14:15:07,156 (MainThread): 14:15:07 | Concurrency: 1 threads (target='dev')
+2019-09-20 14:15:07,157 (MainThread): 14:15:07 | 
+2019-09-20 14:15:07,166 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:15:07,167 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:15:07,949 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:15:07,959 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:15:07,978 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:15:07,979 (MainThread): On test_bf_subset: Close
+2019-09-20 14:15:08,068 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:15:08,069 (MainThread): On test_bf_subset: Close
+2019-09-20 14:15:08,241 (MainThread): 14:15:08 | Done.
+2019-09-20 14:15:08,242 (MainThread): Flushing usage events
+2019-09-20 14:15:22,776 (MainThread): Tracking: tracking
+2019-09-20 14:15:22,779 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005CBC548>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C8E308>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000000005C8B148>]}
+2019-09-20 14:15:23,065 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+
+2019-09-20 14:15:23,066 (MainThread): c:\python\python37\lib\site-packages\snowplow_tracker\emitters.py:225: ResourceWarning: unclosed <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.32.130.75', 62917), raddr=('54.164.98.48', 443)>
+
+2019-09-20 14:15:23,068 (MainThread): Error sending message, disabling tracking
+2019-09-20 14:15:23,106 (MainThread): Parsing macros\core.sql
+2019-09-20 14:15:23,121 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:15:23,198 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:15:23,218 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:15:23,222 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:15:23,252 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:15:23,258 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:15:23,264 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:15:23,268 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:15:23,286 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:15:23,302 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:15:23,319 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:15:23,351 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:15:23,391 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:15:23,397 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:15:23,423 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:15:23,437 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:15:23,450 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:15:23,462 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:15:23,468 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:15:23,477 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:15:23,483 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:15:23,491 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:15:23,522 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:15:23,528 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:15:23,543 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:15:23,549 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:15:23,557 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:15:23,598 (MainThread): Parsing model.dbt_test.test_bf_subset
+2019-09-20 14:15:23,601 (MainThread): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:15:23,602 (MainThread): Opening a new connection, currently in state init
+2019-09-20 14:15:23,605 (MainThread): c:\python\python37\lib\site-packages\botocore\vendored\requests\models.py:169: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+
+2019-09-20 14:15:24,044 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\botocore\\vendored\\requests\\cacert.pem'>
+
+2019-09-20 14:15:24,076 (MainThread): c:\python\python37\lib\site-packages\snowflake\connector\ocsp_asn1crypto.py:84: ResourceWarning: unclosed file <_io.BufferedReader name='c:\\python\\python37\\lib\\site-packages\\certifi\\cacert.pem'>
+
+2019-09-20 14:15:24,604 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 117 macros, 0 operations, 0 seed files, 0 sources
+2019-09-20 14:15:24,606 (MainThread): 
+2019-09-20 14:15:24,607 (MainThread): Acquiring new snowflake connection "master".
+2019-09-20 14:15:24,607 (MainThread): Re-using an available connection from the pool (formerly test_bf_subset).
+2019-09-20 14:15:24,664 (MainThread): Parsing macros\core.sql
+2019-09-20 14:15:24,677 (MainThread): Parsing macros\adapters\common.sql
+2019-09-20 14:15:24,780 (MainThread): Parsing macros\etc\datetime.sql
+2019-09-20 14:15:24,803 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2019-09-20 14:15:24,811 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2019-09-20 14:15:24,819 (MainThread): Parsing macros\etc\get_relation_comment.sql
+2019-09-20 14:15:24,828 (MainThread): Parsing macros\etc\is_incremental.sql
+2019-09-20 14:15:24,837 (MainThread): Parsing macros\etc\query.sql
+2019-09-20 14:15:24,841 (MainThread): Parsing macros\materializations\helpers.sql
+2019-09-20 14:15:24,869 (MainThread): Parsing macros\materializations\common\merge.sql
+2019-09-20 14:15:24,886 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2019-09-20 14:15:24,905 (MainThread): Parsing macros\materializations\seed\seed.sql
+2019-09-20 14:15:24,978 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2019-09-20 14:15:25,066 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2019-09-20 14:15:25,076 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2019-09-20 14:15:25,136 (MainThread): Parsing macros\materializations\table\table.sql
+2019-09-20 14:15:25,162 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2019-09-20 14:15:25,191 (MainThread): Parsing macros\materializations\view\view.sql
+2019-09-20 14:15:25,218 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2019-09-20 14:15:25,242 (MainThread): Parsing macros\schema_tests\not_null.sql
+2019-09-20 14:15:25,246 (MainThread): Parsing macros\schema_tests\relationships.sql
+2019-09-20 14:15:25,252 (MainThread): Parsing macros\schema_tests\unique.sql
+2019-09-20 14:15:25,258 (MainThread): Parsing macros\adapters.sql
+2019-09-20 14:15:25,290 (MainThread): Parsing macros\catalog.sql
+2019-09-20 14:15:25,298 (MainThread): Parsing macros\materializations\incremental.sql
+2019-09-20 14:15:25,324 (MainThread): Parsing macros\materializations\merge.sql
+2019-09-20 14:15:25,331 (MainThread): Parsing macros\materializations\table.sql
+2019-09-20 14:15:25,343 (MainThread): Parsing macros\materializations\view.sql
+2019-09-20 14:15:25,633 (MainThread): Using snowflake connection "master".
+2019-09-20 14:15:25,633 (MainThread): On master: select distinct schema_name
+    from OPA_DEV.information_schema.schemata
+    where catalog_name ilike 'OPA_DEV'
+2019-09-20 14:15:26,198 (MainThread): SQL status: SUCCESS 29 in 0.57 seconds
+2019-09-20 14:15:26,274 (MainThread): Using snowflake connection "master".
+2019-09-20 14:15:26,274 (MainThread): On master: BEGIN
+2019-09-20 14:15:26,431 (MainThread): SQL status: SUCCESS 1 in 0.16 seconds
+2019-09-20 14:15:26,431 (MainThread): Using snowflake connection "master".
+2019-09-20 14:15:26,432 (MainThread): On master: select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           when table_type = 'MATERIALIZED VIEW' then 'materializedview'
+           when table_type = 'EXTERNAL TABLE' then 'externaltable'
+           else table_type
+      end as table_type
+    from OPA_DEV.information_schema.tables
+    where table_schema ilike 'dbt_test'
+      and table_catalog ilike 'opa_dev'
+2019-09-20 14:15:27,833 (MainThread): SQL status: SUCCESS 1 in 1.40 seconds
+2019-09-20 14:15:27,836 (MainThread): On master: ROLLBACK
+2019-09-20 14:15:28,026 (MainThread): Using snowflake connection "master".
+2019-09-20 14:15:28,026 (MainThread): On master: BEGIN
+2019-09-20 14:15:28,160 (MainThread): SQL status: SUCCESS 1 in 0.13 seconds
+2019-09-20 14:15:28,160 (MainThread): On master: COMMIT
+2019-09-20 14:15:28,161 (MainThread): Using snowflake connection "master".
+2019-09-20 14:15:28,161 (MainThread): On master: COMMIT
+2019-09-20 14:15:28,355 (MainThread): SQL status: SUCCESS 1 in 0.19 seconds
+2019-09-20 14:15:28,356 (MainThread): 14:15:28 | Concurrency: 1 threads (target='dev')
+2019-09-20 14:15:28,356 (MainThread): 14:15:28 | 
+2019-09-20 14:15:28,361 (Thread-1): 14:15:28 | 1 of 1 START view model DBT_TEST.test_bf_subset...................... [RUN]
+2019-09-20 14:15:28,362 (Thread-1): Acquiring new snowflake connection "test_bf_subset".
+2019-09-20 14:15:28,362 (Thread-1): Opening a new connection, currently in state init
+2019-09-20 14:15:29,070 (Thread-1): Compiling model.dbt_test.test_bf_subset
+2019-09-20 14:15:29,079 (Thread-1): Writing injected SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:15:29,136 (Thread-1): Writing runtime SQL for node "model.dbt_test.test_bf_subset"
+2019-09-20 14:15:29,142 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:15:29,142 (Thread-1): On test_bf_subset: BEGIN
+2019-09-20 14:15:29,296 (Thread-1): SQL status: SUCCESS 1 in 0.15 seconds
+2019-09-20 14:15:29,296 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:15:29,297 (Thread-1): On test_bf_subset: create or replace view OPA_DEV.DBT_TEST.test_bf_subset as (
+    SELECT *
+FROM opa_stg_uk.fl_acr_booking
+limit 10
+  );
+2019-09-20 14:15:30,048 (Thread-1): SQL status: SUCCESS 1 in 0.75 seconds
+2019-09-20 14:15:30,050 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 14:15:30,050 (Thread-1): Using snowflake connection "test_bf_subset".
+2019-09-20 14:15:30,051 (Thread-1): On test_bf_subset: COMMIT
+2019-09-20 14:15:30,154 (Thread-1): SQL status: SUCCESS 1 in 0.10 seconds
+2019-09-20 14:15:30,164 (Thread-1): 14:15:30 | 1 of 1 OK created view model DBT_TEST.test_bf_subset................. [SUCCESS 1 in 1.80s]
+2019-09-20 14:15:30,248 (MainThread): Using snowflake connection "master".
+2019-09-20 14:15:30,249 (MainThread): On master: BEGIN
+2019-09-20 14:15:30,398 (MainThread): SQL status: SUCCESS 1 in 0.15 seconds
+2019-09-20 14:15:30,399 (MainThread): On master: COMMIT
+2019-09-20 14:15:30,399 (MainThread): Using snowflake connection "master".
+2019-09-20 14:15:30,399 (MainThread): On master: COMMIT
+2019-09-20 14:15:30,579 (MainThread): SQL status: SUCCESS 1 in 0.18 seconds
+2019-09-20 14:15:30,580 (MainThread): 14:15:30 | 
+2019-09-20 14:15:30,580 (MainThread): 14:15:30 | Finished running 1 view model in 5.97s.
+2019-09-20 14:15:30,581 (MainThread): Connection 'master' was left open.
+2019-09-20 14:15:30,582 (MainThread): On master: Close
+2019-09-20 14:15:30,722 (MainThread): Connection 'test_bf_subset' was left open.
+2019-09-20 14:15:30,723 (MainThread): On test_bf_subset: Close
+2019-09-20 14:15:30,903 (MainThread): 
+2019-09-20 14:15:30,903 (MainThread): Completed successfully
+2019-09-20 14:15:30,904 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2019-09-20 14:15:30,905 (MainThread): Flushing usage events
