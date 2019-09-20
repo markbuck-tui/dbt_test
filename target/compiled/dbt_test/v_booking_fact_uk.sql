@@ -1,6 +1,4 @@
-{{
-  config(materialized='view')
-}}
+
 
 WITH fl_acr_booking AS (
 	SELECT
@@ -31,7 +29,7 @@ WITH fl_acr_booking AS (
 	AND (bk_1.sk_season_id > 201701 OR bk_1.sk_booking_id IS NULL)
 
 	-- To be removed when running against all bookings
-	-- AND bk_1.sk_booking_id IN ('380402','975528','10016009','10063844','15994298','22568921','25059884','27813713','28536240','30846203','33404409','20348866','31280892','35353771')
+	AND bk_1.sk_booking_id IN ('380402','975528','10016009','10063844','15994298','22568921','25059884','27813713','28536240','30846203','33404409','20348866','31280892','35353771')
 )
 ,ar_sellstatic AS (
 	SELECT
@@ -84,7 +82,7 @@ WITH fl_acr_booking AS (
 	AND bk_ser_1.service_version = (SELECT MAX(bk_ser_4.service_version) FROM opa_stg_uk.fl_acr_booking_service bk_ser_4 WHERE bk_ser_1.sk_service_id = bk_ser_4.sk_service_id)
 
 	-- To be removed when running against all bookings
-	-- AND bk_ser_1.sk_booking_id IN ('380402','975528','10016009','10063844','15994298','22568921','25059884','27813713','28536240','30846203','33404409','20348866','31280892','35353771')
+	AND bk_ser_1.sk_booking_id IN ('380402','975528','10016009','10063844','15994298','22568921','25059884','27813713','28536240','30846203','33404409','20348866','31280892','35353771')
 )
 ,fl_acr_service AS (
 	SELECT
