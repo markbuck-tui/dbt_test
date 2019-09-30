@@ -8,7 +8,7 @@ WITH fl_acr_booking AS (
 		,bk_1.booking_version
 		,bk_1.atcom_res_id
 		,bk_1.atcom_res_version
-          ,bk_1.atcom_market_id -- CG ADDED in V1.06 for new Source Market Derivation
+    ,bk_1.atcom_market_id -- CG ADDED in V1.06 for new Source Market Derivation
 		,bk_1.number_of_adults
 		,bk_1.number_of_children
 		,bk_1.number_of_infants
