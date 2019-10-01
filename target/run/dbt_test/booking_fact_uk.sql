@@ -1,4 +1,4 @@
-create or replace transient table OPA_DEV.DBT_TEST.v_booking_fact_uk
+create or replace transient table OPA_DEV.DBT_TEST.booking_fact_uk
       as (
 
 WITH booking_service AS (

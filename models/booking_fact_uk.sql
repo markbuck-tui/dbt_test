@@ -1,5 +1,6 @@
-create or replace transient table OPA_DEV.DBT_TEST.v_booking_fact_uk
-      as (
+{{
+  config(materialized='table')
+}}
 
 WITH booking_service AS (
 	SELECT
@@ -465,28 +466,28 @@ WITH booking_service AS (
 		END AS flight_ret_first_date
 
 	-- Service and subservice
-	FROM OPA_DEV.DBT_TEST.with_fl_acr_booking_service bk_ser
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_fl_acr_service ser ON bk_ser.sk_service_id = ser.sk_service_id AND bk_ser.service_version = ser.service_version
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_fl_acr_service_element ser_e ON ser.sk_service_id = ser_e.sk_service_id AND ser.service_version = ser_e.service_version
+	FROM {{ref('with_fl_acr_booking_service')}} bk_ser
+	LEFT OUTER JOIN {{ref('with_fl_acr_service')}} ser ON bk_ser.sk_service_id = ser.sk_service_id AND bk_ser.service_version = ser.service_version
+	LEFT OUTER JOIN {{ref('with_fl_acr_service_element')}} ser_e ON ser.sk_service_id = ser_e.sk_service_id AND ser.service_version = ser_e.service_version
 
 	-- Accom
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_sellstatic sls ON ser.atcom_ser_id = sls.sell_stc_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_staticstock sts ON sls.stc_stk_id = sts.stc_stk_id
+	LEFT OUTER JOIN {{ref('with_ar_sellstatic')}} sls ON ser.atcom_ser_id = sls.sell_stc_id
+	LEFT OUTER JOIN {{ref('with_ar_staticstock')}} sts ON sls.stc_stk_id = sts.stc_stk_id
 
 	-- Room
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_sellunit su ON ser_e.atcom_sub_ser_id = su.sell_unit_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_staticroom str ON sts.stc_stk_id = str.stc_stk_id AND su.rm_id = str.rm_id
+	LEFT OUTER JOIN {{ref('with_ar_sellunit')}} su ON ser_e.atcom_sub_ser_id = su.sell_unit_id
+	LEFT OUTER JOIN {{ref('with_ar_staticroom')}} str ON sts.stc_stk_id = str.stc_stk_id AND su.rm_id = str.rm_id
 
 	-- Board
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_usercodes uc_3 ON su.bb_cd_id = uc_3.user_cd_id
+	LEFT OUTER JOIN {{ref('with_ar_usercodes')}} uc_3 ON su.bb_cd_id = uc_3.user_cd_id
 
 	-- Flight
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transinvroute tir ON ser.atcom_ser_id = tir.trans_inv_route_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transroute tr ON tir.trans_route_id = tr.trans_route_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transinvroutesector tirs ON tir.trans_inv_route_id = tirs.trans_inv_route_id
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transinvsector tis ON tirs.trans_inv_sec_id = tis.trans_inv_sec_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_point dpt ON ser.atcom_dep_point_id = dpt.pt_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_point apt ON ser.atcom_arr_point_id = apt.pt_id
+	LEFT OUTER JOIN {{ref('with_ar_transinvroute')}} tir ON ser.atcom_ser_id = tir.trans_inv_route_id
+	LEFT OUTER JOIN {{ref('with_ar_transroute')}} tr ON tir.trans_route_id = tr.trans_route_id
+	LEFT OUTER JOIN {{ref('with_ar_transinvroutesector')}} tirs ON tir.trans_inv_route_id = tirs.trans_inv_route_id
+  LEFT OUTER JOIN {{ref('with_ar_transinvsector')}} tis ON tirs.trans_inv_sec_id = tis.trans_inv_sec_id
+	LEFT OUTER JOIN {{ref('with_ar_point')}} dpt ON ser.atcom_dep_point_id = dpt.pt_id
+	LEFT OUTER JOIN {{ref('with_ar_point')}} apt ON ser.atcom_arr_point_id = apt.pt_id
 
 	ORDER BY
 		bk_ser.sk_booking_id
@@ -977,21 +978,21 @@ WITH booking_service AS (
     ,COALESCE(bk.dwh_modified_on, CAST('2999-12-31 23:59:59.0' AS TIMESTAMP)) AS sm_updated_datetime
     ,CAST(CONVERT_TIMEZONE('Europe/London',CURRENT_TIMESTAMP()) AS TIMESTAMP_NTZ) AS dm_created_datetime
 
-  FROM OPA_DEV.DBT_TEST.with_fl_acr_booking bk
+  FROM {{ref('with_fl_acr_booking')}} bk
   LEFT OUTER JOIN booking_service bs ON bk.sk_booking_id = bs.sk_booking_id AND bk.booking_version = bs.booking_version
 
   -- Group Season
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_dates gs ON CAST(COALESCE(SUBSTRING(bk.season_date, 1, 4) || SUBSTRING(bk.season_date, 6, 2) || SUBSTRING(bk.season_date, 9, 2), 20991231) AS INTEGER) = gs.bk_date
+  LEFT OUTER JOIN {{ref('with_dates')}} gs ON CAST(COALESCE(SUBSTRING(bk.season_date, 1, 4) || SUBSTRING(bk.season_date, 6, 2) || SUBSTRING(bk.season_date, 9, 2), 20991231) AS INTEGER) = gs.bk_date
 
   -- Market source
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_agent ag ON bk.atcom_agent_id = ag.agt_id
+  LEFT OUTER JOIN {{ref('with_ar_agent')}} ag ON bk.atcom_agent_id = ag.agt_id
 
   -- V1.06 Version of source market joins
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_market m ON bk.atcom_market_id = m.mkt_id
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_officename ofn ON m.off_id = ofn.off_name_id
+  LEFT OUTER JOIN {{ref('with_ar_market')}} m ON bk.atcom_market_id = m.mkt_id
+  LEFT OUTER JOIN {{ref('with_ar_officename')}} ofn ON m.off_id = ofn.off_name_id
 
   -- Channel
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_usercodes uc ON ag.agt_tp_id = uc.user_cd_id
+  LEFT OUTER JOIN {{ref('with_ar_usercodes')}} uc ON ag.agt_tp_id = uc.user_cd_id
 
   -- Currency
   -- LEFT OUTER JOIN ar_currency cur ON bk.atcom_sell_currency_id = cur.cur_id
@@ -1081,7 +1082,7 @@ SELECT
     ELSE 'N'
   END AS latest_record_indicator
 FROM booking_fact_1 bf_1
-LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_booking_fact_margin bfm ON bf_1.bk_booking = bfm.bk_booking
+LEFT OUTER JOIN {{ref('with_booking_fact_margin')}} bfm ON bf_1.bk_booking = bfm.bk_booking
 LEFT OUTER JOIN opa_fl_all.source_market sm ON bf_1.bk_source_market = sm.bk_source_market
 LEFT OUTER JOIN opa_fl_uk.fx_rates_dim_uk fx
   ON bf_1.sm_season = fx.bk_season
@@ -1090,5 +1091,3 @@ ORDER BY
   bk_booking
   ,source_booking_version
   ,record_type DESC
-      );
-    
