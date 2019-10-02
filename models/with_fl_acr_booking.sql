@@ -7,7 +7,7 @@
     -- ,unique_key=sk_booking_id
 
 SELECT
-  bk_1.sk_booking_id as sk_booking_id
+  bk_1.sk_booking_id
   ,bk_1.booking_version
   ,bk_1.atcom_res_id
   ,bk_1.atcom_res_version
@@ -30,19 +30,15 @@ SELECT
   ,bk_1.effective_to
   ,bk_1.dwh_created_on
   ,bk_1.dwh_modified_on
+  ,bk_1.file_dt
 
-FROM opa_stg_uk.fl_acr_booking bk_1
-WHERE bk_1.file_dt = (SELECT MAX(bk_2.file_dt) FROM opa_stg_uk.fl_acr_booking bk_2 WHERE bk_1.sk_booking_id = bk_2.sk_booking_id AND bk_1.booking_version = bk_2.booking_version)
-AND bk_1.booking_version = (SELECT MAX(bk_3.booking_version) FROM opa_stg_uk.fl_acr_booking bk_3 WHERE bk_1.sk_booking_id = bk_3.sk_booking_id)
-AND (bk_1.sk_season_id > 201701 OR bk_1.sk_booking_id IS NULL)
-
--- To be removed when running against all bookings
-AND bk_1.sk_booking_id IN ('380402','975528','10016009','10063844','15994298','22568921','25059884','27813713','28536240','30846203','33404409','20348866','31280892','35353771')
+FROM opa_stg_uk.fl_acr_booking_stream_test bk_1
+-- WHERE bk_1.file_dt = (SELECT MAX(bk_2.file_dt) FROM opa_stg_uk.fl_acr_booking bk_2 WHERE bk_1.sk_booking_id = bk_2.sk_booking_id AND bk_1.booking_version = bk_2.booking_version)
+-- AND bk_1.booking_version = (SELECT MAX(bk_3.booking_version) FROM opa_stg_uk.fl_acr_booking bk_3 WHERE bk_1.sk_booking_id = bk_3.sk_booking_id)
+WHERE (bk_1.sk_season_id > 201701 OR bk_1.sk_booking_id IS NULL)
 
 
 -- Incremental filters
 {% if is_incremental() %}
-  -- this filter will only be applied on an incremental run
-  WHERE file_dt >= (SELECT MAX(file_dt) FROM {{ this }})
+  AND file_dt >= (SELECT MAX(file_dt) FROM opa_stg_uk.fl_acr_booking_stream_test bk_1)
 {% endif %}
--- GROUP BY 1

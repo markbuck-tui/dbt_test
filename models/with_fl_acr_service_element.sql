@@ -11,13 +11,13 @@ SELECT
   ,ser_e_1.sk_service_id
   ,ser_e_1.service_version
   ,ser_e_1.atcom_sub_ser_id
-FROM opa_stg_uk.fl_acr_service_element ser_e_1
-WHERE ser_e_1.file_dt = (SELECT MAX(ser_e_2.file_dt) FROM opa_stg_uk.fl_acr_service_element ser_e_2 WHERE ser_e_1.sk_service_element_id = ser_e_2.sk_service_element_id)
+  ,ser_e_1.file_dt
+FROM opa_stg_uk.fl_acr_service_element_stream_test ser_e_1
+-- WHERE ser_e_1.file_dt = (SELECT MAX(ser_e_2.file_dt) FROM opa_stg_uk.fl_acr_service_element ser_e_2 WHERE ser_e_1.sk_service_element_id = ser_e_2.sk_service_element_id)
 
 
 -- Incremental filters
 {% if is_incremental() %}
   -- this filter will only be applied on an incremental run
-  WHERE file_dt >= (SELECT MAX(file_dt) FROM {{ this }})
+  WHERE file_dt >= (SELECT MAX(file_dt) FROM opa_stg_uk.fl_acr_service_element_stream_test)
 {% endif %}
--- GROUP BY 1

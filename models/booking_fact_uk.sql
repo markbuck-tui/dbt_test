@@ -1,5 +1,8 @@
 {{
-  config(materialized='table')
+  config(
+    materialized='incremental',
+    unique_key='bk_booking'
+  )
 }}
 
 WITH booking_service AS (
@@ -998,6 +1001,7 @@ WITH booking_service AS (
   -- LEFT OUTER JOIN ar_currency cur ON bk.atcom_sell_currency_id = cur.cur_id
 
   WHERE bk_booking IS NOT NULL
+  AND bk.file_dt = (SELECT MAX(bk_2.file_dt) FROM {{ref('with_fl_acr_booking')}} bk_2 WHERE bk.sk_booking_id = bk_2.sk_booking_id AND bk.booking_version = bk_2.booking_version)
 )
 
 SELECT

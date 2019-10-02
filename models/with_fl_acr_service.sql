@@ -21,7 +21,8 @@ SELECT
   ,ser_1.departure_flight_number
   ,ser_1.atcom_arr_point_id
   ,ser_1.source_stock_type_code
-FROM opa_stg_uk.fl_acr_service ser_1
+  ,ser_1.file_dt
+FROM opa_stg_uk.fl_acr_service_stream_test ser_1
 WHERE ser_1.file_dt = (SELECT MAX(ser_2.file_dt) FROM opa_stg_uk.fl_acr_service ser_2 WHERE ser_1.sk_service_id = ser_2.sk_service_id AND ser_1.service_version = ser_2.service_version)
 
 
@@ -29,6 +30,5 @@ WHERE ser_1.file_dt = (SELECT MAX(ser_2.file_dt) FROM opa_stg_uk.fl_acr_service 
 -- Incremental filters
 {% if is_incremental() %}
   -- this filter will only be applied on an incremental run
-  WHERE file_dt >= (SELECT MAX(file_dt) FROM {{ this }})
+  AND file_dt >= (SELECT MAX(file_dt) FROM opa_stg_uk.fl_acr_service_stream_test)
 {% endif %}
--- GROUP BY 1
