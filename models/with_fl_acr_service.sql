@@ -1,6 +1,10 @@
 {{
-  config(materialized='ephemeral')
+  config(
+    materialized='incremental'
+  )
 }}
+
+    -- ,unique_key=concat('sk_service_id', '|', 'service_version') -- bk in the target table
 
 SELECT
   ser_1.sk_service_id
@@ -19,3 +23,12 @@ SELECT
   ,ser_1.source_stock_type_code
 FROM opa_stg_uk.fl_acr_service ser_1
 WHERE ser_1.file_dt = (SELECT MAX(ser_2.file_dt) FROM opa_stg_uk.fl_acr_service ser_2 WHERE ser_1.sk_service_id = ser_2.sk_service_id AND ser_1.service_version = ser_2.service_version)
+
+
+
+-- Incremental filters
+{% if is_incremental() %}
+  -- this filter will only be applied on an incremental run
+  WHERE file_dt >= (SELECT MAX(file_dt) FROM {{ this }})
+{% endif %}
+-- GROUP BY 1

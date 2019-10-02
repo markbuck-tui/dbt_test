@@ -1,5 +1,7 @@
-create or replace view OPA_DEV.DBT_TEST.with_fl_acr_service as (
-    
+create or replace transient table OPA_DEV.DBT_TEST.with_fl_acr_service
+      as (
+
+    -- ,unique_key=concat('sk_service_id', '|', 'service_version') -- bk in the target table
 
 SELECT
   ser_1.sk_service_id
@@ -18,4 +20,11 @@ SELECT
   ,ser_1.source_stock_type_code
 FROM opa_stg_uk.fl_acr_service ser_1
 WHERE ser_1.file_dt = (SELECT MAX(ser_2.file_dt) FROM opa_stg_uk.fl_acr_service ser_2 WHERE ser_1.sk_service_id = ser_2.sk_service_id AND ser_1.service_version = ser_2.service_version)
-  );
+
+
+
+-- Incremental filters
+
+-- GROUP BY 1
+      );
+    

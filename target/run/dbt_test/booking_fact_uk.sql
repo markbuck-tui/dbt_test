@@ -1,7 +1,167 @@
 create or replace transient table OPA_DEV.DBT_TEST.booking_fact_uk
       as (
 
-WITH booking_service AS (
+WITH  __dbt__CTE__with_ar_sellstatic as (
+
+
+SELECT
+  sls_1.sell_stc_id
+  ,sls_1.stc_stk_id
+FROM opa_stg_uk.ar_sellstatic sls_1
+WHERE sls_1.file_dt = (SELECT MAX(sls_2.file_dt) FROM opa_stg_uk.ar_sellstatic sls_2 WHERE sls_1.sell_stc_id = sls_2.sell_stc_id)
+),  __dbt__CTE__with_ar_staticstock as (
+
+
+SELECT
+  ss.stc_stk_id
+  ,ss.cd
+FROM opa_stg_uk.ar_staticstock ss
+WHERE ss.file_dt = (SELECT MAX(ss_2.file_dt) FROM opa_stg_uk.ar_staticstock ss_2 WHERE ss.stc_stk_id = ss_2.stc_stk_id)
+),  __dbt__CTE__with_ar_sellunit as (
+
+
+SELECT
+  su.sell_unit_id
+  ,su.rm_id
+  ,su.bb_cd_id
+FROM opa_stg_uk.ar_sellunit su
+WHERE su.file_dt = (SELECT MAX(su_2.file_dt) FROM opa_stg_uk.ar_sellunit su_2 WHERE su.sell_unit_id = su_2.sell_unit_id)
+),  __dbt__CTE__with_ar_staticroom as (
+
+
+SELECT
+  sr.stc_rm_id
+  ,sr.stc_stk_id
+  ,sr.rm_id
+FROM opa_stg_uk.ar_staticroom sr
+WHERE sr.file_dt = (SELECT MAX(sr_2.file_dt) FROM opa_stg_uk.ar_staticroom sr_2 WHERE sr.stc_rm_id = sr_2.stc_rm_id)
+),  __dbt__CTE__with_ar_usercodes as (
+
+
+SELECT DISTINCT
+  uc_1.user_cd_id
+  ,uc_1.cd
+  ,uc_1.name
+FROM opa_stg_uk.ar_usercodes uc_1
+WHERE uc_1.file_dt = (SELECT MAX(uc_2.file_dt) FROM opa_stg_uk.ar_usercodes uc_2 WHERE uc_1.user_cd_id = uc_2.user_cd_id)
+),  __dbt__CTE__with_ar_transinvroute as (
+
+
+SELECT
+  tir.trans_inv_route_id
+  ,tir.trans_route_id
+FROM opa_stg_uk.ar_transinvroute tir
+WHERE tir.file_dt = (SELECT MAX(tir_2.file_dt) FROM opa_stg_uk.ar_transinvroute tir_2 WHERE tir.trans_inv_route_id = tir_2.trans_inv_route_id)
+),  __dbt__CTE__with_ar_transroute as (
+
+
+SELECT
+	tr.trans_route_id
+	,tr.route_cd
+FROM opa_stg_uk.ar_transroute tr
+WHERE tr.file_dt = (SELECT MAX(tr_2.file_dt) FROM opa_stg_uk.ar_transroute tr_2 WHERE tr.trans_route_id = tr_2.trans_route_id)
+),  __dbt__CTE__with_ar_transinvroutesector as (
+
+
+SELECT
+  tirs.trans_inv_route_id
+  ,tirs.trans_inv_sec_id
+  ,tirs.trans_inv_route_sec_id
+FROM opa_stg_uk.ar_transinvroutesector tirs
+WHERE tirs.file_dt = (SELECT MAX(tirs_2.file_dt) FROM opa_stg_uk.ar_transinvroutesector tirs_2 WHERE tirs.trans_inv_route_sec_id = tirs_2.trans_inv_route_sec_id)
+),  __dbt__CTE__with_ar_transinvsector as (
+
+
+SELECT
+  tis.trans_inv_sec_id
+  ,tis.dep_dt_tm
+FROM opa_stg_uk.ar_transinvsector tis
+WHERE tis.file_dt = (SELECT MAX(tis_2.file_dt) FROM opa_stg_uk.ar_transinvsector tis_2 WHERE tis.trans_inv_sec_id = tis_2.trans_inv_sec_id)
+),  __dbt__CTE__with_ar_point as (
+
+
+SELECT
+  p.pt_id
+  ,p.pt_cd
+FROM opa_stg_uk.ar_point p
+WHERE p.file_dt = (SELECT MAX(p_2.file_dt) FROM opa_stg_uk.ar_point p_2 WHERE p.pt_id = p_2.pt_id)
+),  __dbt__CTE__with_dates as (
+
+
+
+SELECT
+	dd.bk_date
+	,dd.group_season_code
+FROM opa_stg_all.date_dim dd
+),  __dbt__CTE__with_ar_agent as (
+
+
+SELECT DISTINCT
+  ag_1.agt_id
+  ,ag_1.def_mkt_id
+  ,ag_1.agt_tp_id
+FROM opa_stg_uk.ar_agent ag_1
+WHERE ag_1.file_dt = (SELECT MAX(ag_2.file_dt) FROM opa_stg_uk.ar_agent ag_2 WHERE ag_1.agt_id = ag_2.agt_id)
+),  __dbt__CTE__with_ar_market as (
+
+
+SELECT DISTINCT
+  mk_1.mkt_id
+  ,mk_1.off_id
+FROM opa_stg_uk.ar_market mk_1
+WHERE mk_1.file_dt = (SELECT MAX(mk_2.file_dt) FROM opa_stg_uk.ar_market mk_2 WHERE mk_1.mkt_id = mk_2.mkt_id)
+),  __dbt__CTE__with_ar_officename as (
+
+
+SELECT DISTINCT
+  ofn_1.off_name_id
+  ,ofn_1.cd
+  ,ofn_1.name
+  -- ,sm.source_market_code
+FROM opa_stg_uk.ar_officename ofn_1
+-- LEFT OUTER JOIN opa_stg_all.source_market sm ON 'UKATCOM|' || ofn_1.cd = bk_source_market
+WHERE ofn_1.file_dt = (SELECT MAX(ofn_2.file_dt) FROM opa_stg_uk.ar_officename ofn_2 WHERE ofn_1.off_name_id = ofn_2.off_name_id)
+),  __dbt__CTE__with_booking_fact_margin as (
+
+
+SELECT
+  bff_1.bk_booking
+  ,bff_1.ffd_flag
+  ,bff_1.sm_currency
+  ,bff_1.sm_revenue
+  ,bff_1.sm_cnx_and_amend_revenue
+  ,bff_1.sm_accommodation_costs
+  ,bff_1.sm_early_booking_discounts
+  ,bff_1.sm_late_booking_discounts
+  ,bff_1.sm_flying_costs
+  ,bff_1.sm_other_costs
+  ,bff_1.sm_distribution_costs
+  ,bff_1.sm_non_margin_items
+  ,bff_1.sm_margin
+  ,bff_1.smg_currency
+  ,bff_1.smg_revenue
+  ,bff_1.smg_cnx_and_amend_revenue
+  ,bff_1.smg_accommodation_costs
+  ,bff_1.smg_early_booking_discounts
+  ,bff_1.smg_late_booking_discounts
+  ,bff_1.smg_flying_costs
+  ,bff_1.smg_other_costs
+  ,bff_1.smg_distribution_costs
+  ,bff_1.smg_non_margin_items
+  ,bff_1.smg_margin
+  ,bff_1.rep_currency
+  ,bff_1.rep_revenue
+  ,bff_1.rep_cnx_and_amend_revenue
+  ,bff_1.rep_accommodation_costs
+  ,bff_1.rep_early_booking_discounts
+  ,bff_1.rep_late_booking_discounts
+  ,bff_1.rep_flying_costs
+  ,bff_1.rep_other_costs
+  ,bff_1.rep_distribution_costs
+  ,bff_1.rep_non_margin_items
+  ,bff_1.rep_margin
+FROM opa_fl_uk.v_booking_fact_margin_uk bff_1
+),booking_service AS (
 	SELECT
 		bk_ser.sk_booking_id
 		,bk_ser.booking_version
@@ -470,23 +630,23 @@ WITH booking_service AS (
 	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_fl_acr_service_element ser_e ON ser.sk_service_id = ser_e.sk_service_id AND ser.service_version = ser_e.service_version
 
 	-- Accom
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_sellstatic sls ON ser.atcom_ser_id = sls.sell_stc_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_staticstock sts ON sls.stc_stk_id = sts.stc_stk_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_sellstatic sls ON ser.atcom_ser_id = sls.sell_stc_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_staticstock sts ON sls.stc_stk_id = sts.stc_stk_id
 
 	-- Room
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_sellunit su ON ser_e.atcom_sub_ser_id = su.sell_unit_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_staticroom str ON sts.stc_stk_id = str.stc_stk_id AND su.rm_id = str.rm_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_sellunit su ON ser_e.atcom_sub_ser_id = su.sell_unit_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_staticroom str ON sts.stc_stk_id = str.stc_stk_id AND su.rm_id = str.rm_id
 
 	-- Board
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_usercodes uc_3 ON su.bb_cd_id = uc_3.user_cd_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_usercodes uc_3 ON su.bb_cd_id = uc_3.user_cd_id
 
 	-- Flight
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transinvroute tir ON ser.atcom_ser_id = tir.trans_inv_route_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transroute tr ON tir.trans_route_id = tr.trans_route_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transinvroutesector tirs ON tir.trans_inv_route_id = tirs.trans_inv_route_id
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_transinvsector tis ON tirs.trans_inv_sec_id = tis.trans_inv_sec_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_point dpt ON ser.atcom_dep_point_id = dpt.pt_id
-	LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_point apt ON ser.atcom_arr_point_id = apt.pt_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_transinvroute tir ON ser.atcom_ser_id = tir.trans_inv_route_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_transroute tr ON tir.trans_route_id = tr.trans_route_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_transinvroutesector tirs ON tir.trans_inv_route_id = tirs.trans_inv_route_id
+  LEFT OUTER JOIN __dbt__CTE__with_ar_transinvsector tis ON tirs.trans_inv_sec_id = tis.trans_inv_sec_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_point dpt ON ser.atcom_dep_point_id = dpt.pt_id
+	LEFT OUTER JOIN __dbt__CTE__with_ar_point apt ON ser.atcom_arr_point_id = apt.pt_id
 
 	ORDER BY
 		bk_ser.sk_booking_id
@@ -981,17 +1141,17 @@ WITH booking_service AS (
   LEFT OUTER JOIN booking_service bs ON bk.sk_booking_id = bs.sk_booking_id AND bk.booking_version = bs.booking_version
 
   -- Group Season
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_dates gs ON CAST(COALESCE(SUBSTRING(bk.season_date, 1, 4) || SUBSTRING(bk.season_date, 6, 2) || SUBSTRING(bk.season_date, 9, 2), 20991231) AS INTEGER) = gs.bk_date
+  LEFT OUTER JOIN __dbt__CTE__with_dates gs ON CAST(COALESCE(SUBSTRING(bk.season_date, 1, 4) || SUBSTRING(bk.season_date, 6, 2) || SUBSTRING(bk.season_date, 9, 2), 20991231) AS INTEGER) = gs.bk_date
 
   -- Market source
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_agent ag ON bk.atcom_agent_id = ag.agt_id
+  LEFT OUTER JOIN __dbt__CTE__with_ar_agent ag ON bk.atcom_agent_id = ag.agt_id
 
   -- V1.06 Version of source market joins
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_market m ON bk.atcom_market_id = m.mkt_id
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_officename ofn ON m.off_id = ofn.off_name_id
+  LEFT OUTER JOIN __dbt__CTE__with_ar_market m ON bk.atcom_market_id = m.mkt_id
+  LEFT OUTER JOIN __dbt__CTE__with_ar_officename ofn ON m.off_id = ofn.off_name_id
 
   -- Channel
-  LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_ar_usercodes uc ON ag.agt_tp_id = uc.user_cd_id
+  LEFT OUTER JOIN __dbt__CTE__with_ar_usercodes uc ON ag.agt_tp_id = uc.user_cd_id
 
   -- Currency
   -- LEFT OUTER JOIN ar_currency cur ON bk.atcom_sell_currency_id = cur.cur_id
@@ -1081,7 +1241,7 @@ SELECT
     ELSE 'N'
   END AS latest_record_indicator
 FROM booking_fact_1 bf_1
-LEFT OUTER JOIN OPA_DEV.DBT_TEST.with_booking_fact_margin bfm ON bf_1.bk_booking = bfm.bk_booking
+LEFT OUTER JOIN __dbt__CTE__with_booking_fact_margin bfm ON bf_1.bk_booking = bfm.bk_booking
 LEFT OUTER JOIN opa_fl_all.source_market sm ON bf_1.bk_source_market = sm.bk_source_market
 LEFT OUTER JOIN opa_fl_uk.fx_rates_dim_uk fx
   ON bf_1.sm_season = fx.bk_season

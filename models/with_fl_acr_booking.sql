@@ -1,9 +1,13 @@
 {{
-  config(materialized='ephemeral')
+  config(
+    materialized='incremental'
+  )
 }}
 
+    -- ,unique_key=sk_booking_id
+
 SELECT
-  bk_1.sk_booking_id
+  bk_1.sk_booking_id as sk_booking_id
   ,bk_1.booking_version
   ,bk_1.atcom_res_id
   ,bk_1.atcom_res_version
@@ -34,3 +38,11 @@ AND (bk_1.sk_season_id > 201701 OR bk_1.sk_booking_id IS NULL)
 
 -- To be removed when running against all bookings
 AND bk_1.sk_booking_id IN ('380402','975528','10016009','10063844','15994298','22568921','25059884','27813713','28536240','30846203','33404409','20348866','31280892','35353771')
+
+
+-- Incremental filters
+{% if is_incremental() %}
+  -- this filter will only be applied on an incremental run
+  WHERE file_dt >= (SELECT MAX(file_dt) FROM {{ this }})
+{% endif %}
+-- GROUP BY 1
